@@ -1,0 +1,27 @@
+.container {
+	max-width: 1200px;
+  width: 90%;
+	margin-inline: auto;
+
+	@include respond(sm) {
+		max-width: 540px;
+    width: 100%;
+	}
+
+	@include respond(md) {
+		max-width: 720px;
+	}
+
+	@include respond(lg) {
+		max-width: 960px;
+	}
+
+	@include respond(xl) {
+		max-width: 1140px;
+	}
+}
+
+.grid {
+  display: grid;
+}
+

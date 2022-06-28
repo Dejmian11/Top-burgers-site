@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%; // 1rem = 10px
+
+	@include respond(sm) {
+		font-size: 68.75%; // 1rem = 11px
+	}
+
+	@include respond(lg) {
+		font-size: 87.5%; // 1rem = 14px
+	}
+}
+
+body {
+	box-sizing: border-box;
+}

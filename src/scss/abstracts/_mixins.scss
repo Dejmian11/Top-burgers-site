@@ -1,0 +1,62 @@
+// MEDIA QUERY MANAGER
+
+/*
+0 - 576px         X-small
+576 - 768px       Small
+768 - 992px       Medium
+992 - 1200px      Large
+1200px - 1400px   Extra large
+> 1400px          Extra extra large
+
+$breakpoint argument choices:
+- xs
+- sm
+- md
+- lg
+- xl
+- xxl
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == xs {
+		// 576px
+		@media only screen and (max-width: 36em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == sm {
+		@media only screen and (min-width: 36em) {
+			// 768px
+			@content;
+		}
+	}
+
+	@if $breakpoint == md {
+		@media only screen and (min-width: 48em) {
+			// 992px
+			@content;
+		}
+	}
+
+	@if $breakpoint == lg {
+		@media only screen and (min-width: 62em) {
+			//  1200px
+			@content;
+		}
+	}
+
+  @if $breakpoint == xl {
+		@media only screen and (min-width: 75em) {
+			//  1400px
+			@content;
+		}
+	}
+
+	@if $breakpoint == xxl {
+		@media only screen and (min-width: 87.5em) {
+			//  > 1400px
+			@content;
+		}
+	}
+}
