@@ -1,7 +1,7 @@
 .header {
   align-content: center;
   justify-content: center;
-  padding-block: 8rem 2rem;
+  padding-block: 10rem 2rem;
   height: 100vh;
   min-height: 64 0px;
   background-image:linear-gradient(
@@ -15,7 +15,7 @@
   &__img {
     width: 80vw;
     margin-inline: auto;
-    margin-bottom: $su-1-5;
+    margin-bottom: $su-2;
   }
 
   &__data {
@@ -31,7 +31,7 @@
 
   &__text {
     font-size: $fs-default;
-    margin-bottom: $su-3;
+    margin-bottom: $su-4;
   }
 
   &__btn {
