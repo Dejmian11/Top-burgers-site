@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
 body {
 	font-family: "Poppins", sans-serif;
+	color: $color-font;
+  font-size: $fs-default;
 	font-weight: 400;
-  font-size: $fs-smaller;
 	line-height: 1.5;
-	color: $color-white;
+}
+
+.heading--primary {
+  font-size: $fs-h3;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.1rem;
+  color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: $su-2;
+
+  @include respond(sm) {
+    font-size: $fs-h2;
+  }
+
+  @include respond(xl) {
+    font-size: $fs-h1;
+  }
 }

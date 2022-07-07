@@ -6,10 +6,10 @@
 
   @include respond(lg) {
     background-color: transparent;
+    padding-block: $su-2;
   }
 
 	&__container {
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -22,18 +22,6 @@
 
 	&__image {
 		width: 100%;
-	}
-
-	&__btn {
-		background-color: transparent;
-		border: 2px solid $color-grey-dark-2;
-		border-radius: $su-0-5;
-		height: 4rem;
-		width: 4rem;
-
-		@include respond(lg) {
-			display: none;
-		}
 	}
 
 	&__icon {
@@ -54,7 +42,6 @@
 
   &__link {
     color: $color-white;
-    font-size: $fs-smaller;
     transition: .2s all;
 
     &:hover {

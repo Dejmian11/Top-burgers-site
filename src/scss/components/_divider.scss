@@ -1,0 +1,12 @@
+.divider {
+  height: 2px;
+  width: 50%;
+  border: none;
+  border-radius: 4px;
+  background-color: $color-primary;
+  margin-bottom: $su-2;
+
+  @include respond(sm) {
+    height: 4px;
+  }
+}

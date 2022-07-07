@@ -1,41 +1,39 @@
 .header {
   align-content: center;
   justify-content: center;
-  padding-block: 10rem 2rem;
-  height: 100vh;
-  min-height: 64 0px;
+  padding-block: 10rem 5rem;
   background-image:linear-gradient(
     to bottom,
     rgba($color-black, 0.9),
-    rgba($color-black, 0.8)
+    rgba($color-black, 0.9)
   ), url(../images/background-small.png);
   background-size: cover;
   background-position: top;
 
+  @include respond(sm) {
+    min-height: calc(950px - 15rem);
+    height: calc(100vh - 15rem);
+  }
+
   &__img {
-    width: 80vw;
-    margin-inline: auto;
-    margin-bottom: $su-2;
+    width: 100%;
+    margin-bottom: $su-3;
+
+    @include respond(sm) {
+      margin-inline: auto;
+      width: 550px;
+    }
   }
 
   &__data {
     text-align: center;
   }
 
-  &__title {
-    text-transform: uppercase;
-    line-height: 1.3;
-    font-size: $fs-h1;
-    margin-bottom: $su-1-5;
-  }
-
   &__text {
-    font-size: $fs-default;
     margin-bottom: $su-4;
-  }
 
-  &__btn {
-    font-size: $fs-default;
-    padding: $su-1 $su-2;
+    @include respond(sm) {
+      padding-inline: 6rem;
+    }
   }
 }

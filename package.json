@@ -46,5 +46,8 @@
 		"stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
 	},
 	"main": "webpack.config.js",
-	"keywords": []
+	"keywords": [],
+	"dependencies": {
+		"browser-sync": "^2.27.10"
+	}
 }

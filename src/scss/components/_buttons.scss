@@ -1,24 +1,50 @@
 .btn {
-	cursor: pointer;
-	font: inherit;
-  color: $color-black;
+	&,
+	&:link,
+	&:visited {
+		display: inline-flex;
+		color: $color-black;
+		font-size: $fs-default;
+		font-weight: 500;
+		transition: all 0.2s;
+
+		cursor: pointer;
+	}
+
+	&__icon {
+    margin-left: $su-0-5;
+		fill: none;
+		stroke: $color-black;
+		height: 2rem;
+		width: 2rem;
+	}
 
 	&--primary {
-		background-color: $color-primary;
-		font-weight: 600;
-		padding: $su-0-75 $su-1-5;
-		font-size: $fs-smallest;
-		border-radius: $su-2;
-		border: none;
-		transition: 0.2s all;
+    padding: 1.5rem 2.8rem;
+		border-radius: 3rem;
+		background: $color-primary-gradient;
+		background-size: 200%;
+		background-position-x: 100%;
 
 		&:hover {
-			background-color: $color-primary-dark;
+			background-position-x: 0%;
 		}
 	}
 
-  &--big {
-    font-size: $fs-smaller;
-    padding: $su-1 $su-2;
+  &--dark {
+    background-color: transparent;
+		border: 2px solid $color-grey-dark-2;
+		border-radius: $su-0-5;
+		height: 4rem;
+		width: 4rem;
+    transition: all .2s;
+
+    &:hover {
+      border: 2px solid $color-grey-dark-1;
+    }
+
+		@include respond(lg) {
+			display: none;
+		}
   }
 }

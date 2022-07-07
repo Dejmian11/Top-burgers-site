@@ -19,7 +19,7 @@ $breakpoint argument choices:
 
 @mixin respond($breakpoint) {
 	@if $breakpoint == xs {
-		// 576px
+		// < 576px
 		@media only screen and (max-width: 36em) {
 			@content;
 		}
@@ -27,28 +27,28 @@ $breakpoint argument choices:
 
 	@if $breakpoint == sm {
 		@media only screen and (min-width: 36em) {
-			// 768px
+			// 576px
 			@content;
 		}
 	}
 
 	@if $breakpoint == md {
 		@media only screen and (min-width: 48em) {
-			// 992px
+			// 768px
 			@content;
 		}
 	}
 
 	@if $breakpoint == lg {
 		@media only screen and (min-width: 62em) {
-			//  1200px
+			//  992px
 			@content;
 		}
 	}
 
   @if $breakpoint == xl {
 		@media only screen and (min-width: 75em) {
-			//  1400px
+			//  1200px
 			@content;
 		}
 	}
