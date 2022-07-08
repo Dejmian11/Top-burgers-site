@@ -83,7 +83,7 @@ video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-  font-family: inherit;
+	font-family: inherit;
 	vertical-align: baseline;
 }
 
@@ -97,7 +97,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+svg {
 	display: block;
 }
 
@@ -107,7 +108,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 blockquote,

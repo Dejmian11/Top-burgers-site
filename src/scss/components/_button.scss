@@ -3,6 +3,7 @@
 	&:link,
 	&:visited {
 		display: inline-flex;
+    align-items: center;
 		color: $color-black;
 		font-size: $fs-default;
 		font-weight: 500;
@@ -25,6 +26,10 @@
 		background: $color-primary-gradient;
 		background-size: 200%;
 		background-position-x: 100%;
+
+    @include respond(lg) {
+      padding: 1.1rem 2.2rem;
+    }
 
 		&:hover {
 			background-position-x: 0%;

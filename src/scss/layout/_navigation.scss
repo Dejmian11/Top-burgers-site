@@ -3,10 +3,16 @@
 	position: fixed;
 	width: 100vw;
 	background-color: $color-black;
+  z-index: 100;
 
   @include respond(lg) {
     background-color: transparent;
     padding-block: $su-2;
+
+    &--sticky {
+      background-color: $color-black;
+      padding-block: $su-1;
+    }
   }
 
 	&__container {
