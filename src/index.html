@@ -16,9 +16,9 @@
 				<a href="#header" class="nav__logo">
 					<img
 						class="nav__image"
-            src="images/logo.webp"
+						src="images/logo.webp"
 						alt="Top-Burgers logo"
-					/> 
+					/>
 				</a>
 
 				<button class="nav__btn btn btn--dark">
@@ -55,43 +55,74 @@
 			</div>
 		</nav>
 
-  <!-- ============================HEADER============================ -->
-		 <header class="header" id="header">
-				<div class="header__container container grid">
-          <div class="header__img-box">
-            <img
-              class="header__img"
-              src="images/burger-500.webp"
-              srcset="images/burger-500.webp 500w, images/burger-1000.webp 1000w, images/burger-1500.webp 1500w" 
-              alt="Burger"
-            /> 
-            
-          </div>
+		<!-- ============================HEADER============================ -->
+		<header class="header" id="header">
+			<div class="header__container container grid">
+				<img
+					class="header__img"
+					srcset="
+						images/burger-500.webp   500w,
+						images/burger-1000.webp 1000w,
+						images/burger-1500.webp 1500w
+					"
+					sizes="(max-width: 62em) 90vw, 630px"
+					src="images/burger-1000.webp"
+					alt="Burger"
+				/>
 
-					<div class="header__data">
-						<h1 class="header__title heading--primary">Wyjątkowe burgery dla <span class="colorPrimary bold">smakoszy</span></h1>
+				<div class="header__data">
+					<h1 class="header__title heading--primary">
+						Wyjątkowe burgery dla
+						<span class="colorPrimary bold">smakoszy</span>
+					</h1>
 
-            <hr class="header__divider divider">
+					<hr class="header__divider divider" />
 
-						<p class="header__text">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Laboriosam veritatis voluptas iure deleniti vitae expedita.
-						</p>
-						<a class="header__btn btn btn--primary" href="#">Nasze Menu <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="2" preserveAspectRatio="none">
-              <path stroke-linecap="round" viewBox="0 0 24 24" height="100%" width="100%" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg></a>
-					</div>
-
-          <div class="header__scroll">
-            <a href="#" class="header__scroll-link">
-              <svg class="header__scroll-icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="2" preserveAspectRatio="none">
-                <path stroke-linecap="round" viewBox="0 0 24 24" height="100%" width="100%" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
-          </div>
+					<p class="header__text">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+						veritatis voluptas iure deleniti vitae expedita.
+					</p>
+					<a class="header__btn btn btn--primary" href="#"
+						>Nasze Menu
+						<svg
+							class="btn__icon"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							preserveAspectRatio="none"
+						>
+							<path
+								stroke-linecap="round"
+								viewBox="0 0 24 24"
+								height="100%"
+								width="100%"
+								stroke-linejoin="round"
+								d="M19 9l-7 7-7-7"
+							/></svg
+					></a>
 				</div>
-			</header>
-		</main>
+
+				<div class="header__scroll">
+					<a href="#" class="header__scroll-link">
+						<svg
+							class="header__scroll-icon"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							preserveAspectRatio="none"
+						>
+							<path
+								stroke-linecap="round"
+								viewBox="0 0 24 24"
+								height="100%"
+								width="100%"
+								stroke-linejoin="round"
+								d="M19 9l-7 7-7-7"
+							/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</header>
 	</body>
 </html>
-
