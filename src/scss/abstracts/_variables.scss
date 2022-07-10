@@ -1,40 +1,52 @@
+// FONT FAMILY
+$ff-body: 'Poppins', sans-serif;
+
 // COLORS
-$color-primary: #ffd700;
-$color-primary-light: #ffe247;
-$color-primary-dark: #b39905;
+$clr-primary-400: hsl(51, 100%, 64%);
+$clr-primary-500: hsl(51, 100%, 50%);
+$clr-primary-600: hsl(51, 100%, 36%);
 
-$color-red: #FF470F;
-$color-green: #38BC11;
-$color-blue: #1C86FF;
+$clr-red: hsl(14, 100%, 53%);
+$clr-green: hsl(106, 83%, 40%);
+$clr-blue: hsl(212, 100%, 55%);
 
-$color-grey-light: #aaa;
+$clr-grey-400: hsl(0, 0%, 67%);
+$clr-grey-500: hsl(0, 0%, 47%);
+$clr-grey-600: hsl(0, 0%, 27%);
 
-$color-grey-dark-1: #777;
-$color-grey-dark-2: #444;
+$clr-black: hsl(0, 0%, 7%);
+$clr-white: hsl(0, 0%, 93%);
 
-$color-black: #111;
-$color-white: #eee;
-
-$color-font: #ccc;
+$clr-font: hsl(0, 0%, 80%);
 
 // GRADIENTS
-$color-primary-gradient: linear-gradient(140deg, $color-primary-dark 20%,  $color-primary 48%, $color-primary-light 78%);
+$clr-primary-gradient: linear-gradient(
+	140deg,
+	$clr-primary-600 20%,
+	$clr-primary-500 48%,
+	$clr-primary-400 78%
+);
 
 // FONT SIZES
 // 1 rem = 10px
+:root {
+	--fs-400: 1.6rem;
+	--fs-700: 4rem;
+	--fs-900: 5.6rem;
+	--fs-xxl: 4rem;
 
-$fs-default: 1.6rem;
-$fs-big: 1.7rem;
-$fs-bigger: 2.4rem;
-$fs-h3: 4.1rem;
-$fs-h2: 5.3rem;
-$fs-h1: 7rem;
+  @include respond(sm) {
+    --fs-xxl: 5.6rem;
+  }
 
+  @include respond(lg) {
+    --fs-xxl: 7rem;
+  }
+}
 
 // SPACING UNITS
-$su-0-5: .5rem;
+$su-0-5: 0.5rem;
 $su-1: 1rem;
 $su-2: 2rem;
 $su-3: 3rem;
 $su-4: 4rem;
-

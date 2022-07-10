@@ -1,0 +1,142 @@
+.home {
+	position: relative;
+	padding-block: 10rem 5rem;
+	background-image: linear-gradient(
+			to bottom,
+			rgba($clr-black, 0.9),
+			rgba($clr-black, 0.9)
+		),
+		url(../images/background-1000.webp);
+	background-size: cover;
+	background-position: top;
+	overflow: hidden;
+
+	@media screen and (min-resolution: 192dpi) and (min-width: 48em),
+		(min-width: 75em) {
+		background-image: linear-gradient(
+				to bottom,
+				rgba($clr-black, 0.9),
+				rgba($clr-black, 0.9)
+			),
+			url(../images/background-1500.webp);
+	}
+
+	@include respond(sm) {
+		min-height: calc(750px - 15rem);
+	}
+
+	@include respond(md) {
+		padding-block: 10rem 1rem;
+	}
+
+	@include respond(lg) {
+		height: calc(100vh - 11rem);
+	}
+
+	&__container {
+		height: 100%;
+
+		@include respond(lg) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 5rem;
+			align-items: center;
+		}
+
+		@include respond(xl) {
+			grid-row-gap: 0;
+		}
+	}
+
+	&__img {
+		position: relative;
+		width: 100%;
+		margin-bottom: $su-3;
+		animation: fadeIn 1s linear;
+
+		@include respond(sm) {
+			margin-inline: auto;
+			width: 550px;
+		}
+
+		@include respond(lg) {
+			grid-column: 2;
+			width: 110%;
+			margin-left: -2rem;
+			margin-bottom: 0;
+		}
+	}
+
+	&__data {
+		text-align: center;
+		animation: fadeIn 1s linear;
+
+		@include respond(md) {
+			margin-bottom: $su-2;
+		}
+
+		@include respond(lg) {
+			grid-column: 1;
+			grid-row: 1;
+			text-align: left;
+			margin-bottom: 0;
+			animation: fadeInLeft 1s linear;
+		}
+	}
+
+	&__title {
+		@include respond(lg) {
+			text-align: left;
+		}
+	}
+
+	&__divider {
+		@include respond(lg) {
+			margin-left: 0;
+			width: 30rem;
+		}
+
+		@include respond(xl) {
+			width: 40rem;
+		}
+	}
+
+	&__text {
+		margin-bottom: $su-4;
+
+		@include respond(sm) {
+			padding-inline: 6rem;
+		}
+
+		@include respond(lg) {
+			padding-inline: 0;
+			margin-bottom: $su-3;
+		}
+	}
+
+	&__scroll {
+		display: none;
+
+		@include respond(md) {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+
+		@include respond(lg) {
+			grid-column: span 2;
+		}
+
+		&-icon {
+			fill: none;
+			stroke: $clr-white;
+			height: 3rem;
+			width: 3rem;
+			animation: moveBottom 1s linear infinite, fadeIn 1s linear;
+			transition: 0.2s all;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}

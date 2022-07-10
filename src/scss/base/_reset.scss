@@ -89,6 +89,7 @@ video {
 
 article,
 aside,
+img,
 details,
 figcaption,
 figure,
@@ -109,6 +110,10 @@ ul {
 
 a {
 	text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 blockquote,
