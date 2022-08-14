@@ -1,5 +1,33 @@
-// MEDIA QUERY MANAGER
+// FLEXBOX
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+// FEATURE BOX BACKGROUND
+@mixin feature-box-bg($image-number) {
+	background-image: linear-gradient(
+			to bottom,
+			rgba(hsl(51, 100%, 50%), 0.1),
+			rgba(hsl(51, 100%, 50%), 0.1)
+		),
+		url(../images/features-#{$image-number}-500.webp);
+	background-size: cover;
+	background-position: center;
+
+	@media screen and (min-resolution: 192dpi) and (min-width: 48em),
+		(min-width: 75em) {
+		background-image: linear-gradient(
+				to bottom,
+				rgba(hsl(51, 100%, 50%), 0.1),
+				rgba(hsl(51, 100%, 50%), 0.1)
+			),
+			url(../images/features-#{$image-number}-1000.webp);
+	}
+}
+
+// MEDIA QUERY MANAGER
 /*
 0 - 576px         X-small
 576 - 768px       Small
@@ -16,7 +44,6 @@ $breakpoint argument choices:
 - xl
 - xxl
 */
-
 @mixin respond($breakpoint) {
 	@if $breakpoint == xs {
 		// < 576px
@@ -46,7 +73,7 @@ $breakpoint argument choices:
 		}
 	}
 
-  @if $breakpoint == xl {
+	@if $breakpoint == xl {
 		@media only screen and (min-width: 75em) {
 			//  1200px
 			@content;

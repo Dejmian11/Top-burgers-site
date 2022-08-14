@@ -1,0 +1,96 @@
+@use '../abstracts' as *;
+
+.feature-box {
+	max-width: 40rem;
+	border-radius: $size-100;
+	overflow: hidden;
+
+	transition: transform 0.5s ease;
+
+
+	&:hover {
+		transform: scale(1.05);
+
+
+		& .feature-box__content {
+			transform: translateY(0);
+      transition-delay: .3s;
+		}
+
+    & .feature-box__icon {
+      transform: translateX(-300%);
+      opacity: 0;
+    }
+	}
+
+	.feature-box__content > *:not(.heading-tertiary, .feature-box__icon) {
+		@include respond(lg) {
+			opacity: 0;
+			transition: opacity 0.5s linear;
+		}
+	}
+
+	&:hover .feature-box__content > *:not(.heading-tertiary, .feature-box__ico) {
+		opacity: 1;
+		transition-delay: 0.3s;
+	}
+
+	@include respond(lg) {
+		height: 40rem;
+	}
+
+	&--1 {
+		@include feature-box-bg(1);
+	}
+
+	&--2 {
+		@include feature-box-bg(2);
+	}
+
+	&--3 {
+		@include feature-box-bg(3);
+	}
+
+	&__content {
+    position: relative;
+		padding: $size-600 $size-500;
+		background-image: linear-gradient(
+			to bottom,
+			rgba($clr-primary-500, 0.8),
+			rgba($clr-primary-400, 0.8)
+		);
+
+		@include respond(lg) {
+			height: 100%;
+			text-align: left;
+			transform: translateY(77%);
+
+			transition: transform 0.5s ease;
+		}
+	}
+
+  &__icon {
+    display: none;
+
+    @include respond(lg) {
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      display: block;
+      padding: 1.25rem;
+      background-image: $clr-primary-gradient;
+      border-radius: 50%;
+      box-shadow: $shadow-primary;
+
+      transition: all .2s linear;
+    }
+  }
+
+	&__text {
+		margin-top: $size-400;
+
+		@include respond(lg) {
+			margin-top: $size-500;
+		}
+	}
+}

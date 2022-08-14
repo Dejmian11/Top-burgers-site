@@ -1,6 +1,8 @@
-@keyframes moveBottom {
+@use '../abstracts' as *;
+
+@keyframes moveVertically {
 	50% {
-		transform: translateY(1rem);
+		transform: translateY($size-200);
 	}
 }
 

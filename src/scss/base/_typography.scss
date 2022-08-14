@@ -1,20 +1,55 @@
+@use '../abstracts' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
 
 body {
-	font-family: $ff-body;
 	color: $clr-font;
-  font-size: var(--fs-400);
-	font-weight: 400;
-	line-height: 1.5;
+	font-family: $ff-body;
+	font-size: var(--fs-body);
+	font-weight: $fw-normal;
+	line-height: 1.6;
+	text-align: center;
 }
 
-.heading--primary {
-  font-size: var(--fs-xxl);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.1rem;
-  color: $clr-white;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: $su-2;
+.heading {
+	color: $clr-heading;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: $fw-semi-bold;
+	line-height: 1.1;
+	letter-spacing: -0.1rem;
+
+	&-primary {
+		font-size: var(--fs-primary-heading);
+
+		@include respond(lg) {
+			text-align: left;
+		}
+	}
+
+	&-secondary {
+		font-size: var(--fs-secondary-heading);
+	}
+
+  &-tertiary {
+    font-size: var(--fs-tertiary-heading);
+    font-weight: $fw-semi-bold;
+
+    &--light {
+      color: $clr-grey-200;
+    }
+
+    &--dark {
+      color: $clr-black;
+    }
+
+    &--gold {
+      color: $clr-primary-500;
+    }
+  }
+}
+
+.description {
+  max-width: 60rem;
+  margin-inline: auto;
 }

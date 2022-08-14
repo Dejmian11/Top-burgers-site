@@ -1,0 +1,114 @@
+@use '../abstracts' as *;
+
+// ===================HOME SECTION==================
+.home-section {
+	display: flex;
+	align-items: flex-end;
+	min-height: max(100vh, 700px);
+	padding-block: 10rem $size-400;
+	background-image: linear-gradient(
+			to bottom,
+			rgba($clr-black, 0.9),
+			rgba($clr-black, 0.9)
+		),
+		url(../images/background-home-1000.webp);
+	background-size: cover;
+	background-position: top;
+
+	@media screen and (min-resolution: 192dpi) and (min-width: 48em),
+		(min-width: 75em) {
+		background-image: linear-gradient(
+				to bottom,
+				rgba($clr-black, 0.9),
+				rgba($clr-black, 0.9)
+			),
+			url(../images/background-home-1500.webp);
+	}
+}
+
+.home {
+	&__content {
+		div:nth-child(2) {
+			@include respond(md) {
+				grid-column: 1;
+				animation: fadeInLeft 1s linear;
+			}
+
+			@include respond(lg) {
+				text-align: left;
+			}
+		}
+	}
+
+	&__img {
+		max-width: 550px;
+		margin-inline: auto;
+		animation: fadeIn 1s linear;
+
+		@include respond(lg) {
+			max-width: 100%;
+		}
+	}
+
+	&__divider {
+		@include respond(lg) {
+			margin-left: 0;
+		}
+	}
+
+	&__button {
+		margin-top: $size-600;
+	}
+
+	&__button-icon {
+		display: inline;
+		width: $size-400;
+		margin-left: $size-200;
+
+		@include respond(md) {
+			width: $size-300;
+		}
+	}
+
+	&__scroll {
+		justify-items: center;
+		margin-top: $size-700;
+
+		@include respond(lg) {
+			margin-top: $size-900;
+		}
+
+		&-icon {
+			animation: moveVertically 1s linear infinite, fadeIn 1s linear;
+			transition: 0.2s all;
+
+			&:hover {
+				transform: scale(1.6);
+			}
+		}
+	}
+}
+
+.features-section {
+	padding-block: $size-900;
+
+	@include respond(lg) {
+		padding-block: 8rem;
+	}
+}
+
+// =================FEATURES SECTION================
+.features__row {
+	justify-content: center;
+	gap: $size-500;
+	margin-top: $size-600;
+
+	@include respond(lg) {
+		gap: $size-900;
+		margin-top: $size-900;
+	}
+
+	@include respond(xl) {
+		gap: 9rem;
+	}
+}

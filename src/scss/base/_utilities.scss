@@ -1,11 +1,13 @@
+@use '../abstracts' as *;
+
+// CONTAINER
 .container {
-	max-width: 1200px;
-  width: 90%;
+	width: 90%;
 	margin-inline: auto;
 
 	@include respond(sm) {
 		max-width: 540px;
-    width: 100%;
+		width: 100%;
 	}
 
 	@include respond(md) {
@@ -21,14 +23,60 @@
 	}
 }
 
-.grid {
-  display: grid;
+//GRID
+.row {
+	display: grid;
+  align-items: center;
+  gap: $size-400;
+
+	@include respond(lg) {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
 }
 
-.colorPrimary {
-  color: $clr-primary-500;
+// FLOW
+:where(.flow :not(:first-child)) {
+	margin-top: 1.2em;
 }
 
-.bold {
-  font-weight: 700;
+// VISUALLY HIDDEN
+.u-visuallyHidden {
+	position: absolute;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+// COLORS
+.u-clrPrimary {
+	color: $clr-primary-500;
+}
+
+.u-clrBlack {
+  color: $clr-black;
+}
+
+// FONT WEIGHTS
+.u-fwBold {
+	font-weight: $fw-bold;
+}
+
+// BACKGROUND COLORS
+.u-bgPrimary {
+	background-color: $clr-primary-500;
+}
+
+.u-bgBlack {
+	background-color: $clr-black;
+}
+
+.u-bgGrey {
+	background-color: $clr-grey-900;
 }

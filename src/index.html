@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Top Burgers oficjalna strona internetowa"
+		/>
+		<meta name="keywords" content="Top Burgers, Burger, Restauracja" />
+		<meta name="author" content="Damian Pruś" />
 
 		<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
 
@@ -12,117 +18,158 @@
 	<body>
 		<!-- ==========================HEADER========================== -->
 		<header class="header">
-			<nav class="nav container">
-				<a href="#header" class="nav__logo">
-					<img
-						class="nav__image"
-						src="images/logo.webp"
-						alt="Top-Burgers logo"
-					/>
+			<div class="header__container container">
+				<a href="#home" class="header__logo">
+					<img src="images/logo.webp" alt="Top-Burgers" />
 				</a>
 
-				<button class="nav__btn btn btn--dark">
-					<svg
-						class="nav__icon"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						stroke-width="2"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
-					</svg>
+				<button class="mobile-nav-toggle button">
+					<img
+						src="images/icons/iconmonstr-menu-lined.svg"
+						aria-controls="nav-primary"
+					/>
+					<span class="u-visuallyHidden">Menu</span>
 				</button>
 
-				<ul class="nav__list">
-					<li class="nav__element">
-						<a href="#header" class="nav__link"> Strona Główna </a>
-					</li>
-					<li class="nav__element">
-						<a href="#" class="nav__link"> O Nas </a>
-					</li>
-					<li class="nav__element">
-						<a href="#" class="nav__link"> Menu </a>
-					</li>
-					<li class="nav__element">
-						<a href="#" class="nav__link"> Kontakt </a>
-					</li>
-				</ul>
+				<nav class="nav nav--primary" id="nav-primary">
+					<ul class="nav__list" role="list" aria-label="Primary">
+						<li class="nav__element">
+							<a href="#" class="nav__link">Strona Główna</a>
+						</li>
+						<li class="nav__element">
+							<a href="#" class="nav__link">O Nas</a>
+						</li>
+						<li class="nav__element">
+							<a href="#" class="nav__link">Menu</a>
+						</li>
+						<li class="nav__element">
+							<a href="#" class="nav__link">Kontakt</a>
+						</li>
+					</ul>
+				</nav>
 
-				<button class="nav__btn--primary btn btn--primary">Zamów Online</button>
-			</nav>
+				<button class="header__button button button--primary">
+					Zamów Online
+				</button>
+			</div>
 		</header>
 
 		<!-- =============================MAIN============================= -->
 		<main class="main">
 			<!-- =============================HOME============================= -->
-			<section class="home section" id="home">
-				<div class="home__container container grid">
-					<img
-						class="home__img"
-						srcset="
-							images/burger-500.webp   500w,
-							images/burger-1000.webp 1000w,
-							images/burger-1500.webp 1500w
-						"
-						sizes="(max-width: 62em) 90vw, 630px"
-						src="images/burger-1000.webp"
-						alt="Burger"
-					/>
+			<section class="home-section" id="home">
+				<div class="container">
+					<div class="home__content row">
+						<div>
+							<img
+								class="home__img"
+								srcset="
+									images/burger-500.webp   500w,
+									images/burger-1000.webp 1000w,
+									images/burger-1500.webp 1500w
+								"
+								sizes="(max-width: 62em) 90vw, 630px"
+								src="images/burger-1000.webp"
+								alt="Burger"
+							/>
+						</div>
 
-					<div class="home__data">
-						<h1 class="home__title heading--primary">
-							Wyjątkowe burgery dla
-							<span class="colorPrimary bold">smakoszy</span>
-						</h1>
-
-						<hr class="home__divider divider" />
-
-						<p class="home__text">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Laboriosam veritatis voluptas iure deleniti vitae expedita.
-						</p>
-						<a class="home__btn btn btn--primary" href="#"
-							>Nasze Menu
-							<svg
-								class="btn__icon"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								preserveAspectRatio="none"
-							>
-								<path
-									stroke-linecap="round"
-									viewBox="0 0 24 24"
-									height="100%"
-									width="100%"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								/></svg
-						></a>
+						<div class="flow">
+							<h1 class="home__title heading heading-primary">
+								Wyjątkowe burgery dla
+								<span class="u-clrPrimary u-fwBold">smakoszy</span>
+							</h1>
+							<hr class="home__divider divider" />
+							<p class="home__description description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+								suscipit inventore voluptates asperiores atque animi sit minus
+								itaque in repellendus, id nisi accusamus similique aliquid!
+							</p>
+							<a class="home__button button button--primary" href="#"
+								>Nasze Menu
+								<img
+									class="home__button-icon"
+									src="images/icons/iconmonstr-arrow-65.svg"
+							/></a>
+						</div>
 					</div>
 
-					<div class="home__scroll">
-						<a href="#" class="home__scroll-link">
-							<svg
+					<div class="home__scroll row">
+						<a href="#features" class="home__scroll-button">
+							<img
 								class="home__scroll-icon"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								preserveAspectRatio="none"
-							>
-								<path
-									stroke-linecap="round"
-									viewBox="0 0 24 24"
-									height="100%"
-									width="100%"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								/>
-							</svg>
+								src="images/icons/iconmonstr-arrow-65-grey.svg"
+							/>
 						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===========================FEATURES=========================== -->
+			<section class="features-section section u-bgBlack" id="features">
+				<div class="container">
+					<div class="flow">
+						<h1 class="heading heading-secondary">
+							Witamy w top<span class="u-clrPrimary">burgers</span>!
+						</h1>
+						<hr class="divider" />
+						<p class="features__description description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+							tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+						</p>
+					</div>
+
+					<div class="features__row row">
+						<div class="feature-box feature-box--1">
+							<div class="feature-box__content">
+								<img
+									class="feature-box__icon"
+									src="images/icons/iconmonstr-time-2.svg"
+								/>
+								<h3 class="heading-tertiary heading-tertiary--dark">
+									Szybka dostawa
+								</h3>
+								<p class="feature-box__text u-clrBlack">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Voluptatem laudantium est dicta inventore deserunt
+									reprehenderit sint, nisi quos ad ratione.
+								</p>
+							</div>
+						</div>
+
+						<div class="feature-box feature-box--2">
+							<div class="feature-box__content">
+                <img
+									class="feature-box__icon"
+									src="images/icons/iconmonstr-coin-2.svg"
+								/>
+								<h3 class="heading-tertiary heading-tertiary--dark">
+									Najlepsze ceny
+								</h3>
+								<p class="feature-box__text u-clrBlack">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Nostrum ex architecto quaerat! Error voluptatem qui minima
+									asperiores quae soluta accusantium?
+								</p>
+							</div>
+						</div>
+
+						<div class="feature-box feature-box--3">
+							<div class="feature-box__content">
+                <img
+									class="feature-box__icon"
+									src="images/icons/iconmonstr-leaf-1.svg"
+								/>
+								<h3 class="heading-tertiary heading-tertiary--dark">
+									Świeże składniki
+								</h3>
+								<p class="feature-box__text u-clrBlack">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Suscipit, excepturi. Eveniet animi sequi quidem laboriosam
+									maiores porro quas, dolore incidunt quo, sunt ratione!
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>

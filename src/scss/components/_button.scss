@@ -1,55 +1,89 @@
-.btn {
+@use '../abstracts' as *;
+
+.button {
 	&,
 	&:link,
 	&:visited {
 		display: inline-flex;
 		align-items: center;
-		color: $clr-black;
-		font-size: var(--fs-400);
-		font-weight: 500;
+		padding: 1.3em 2.8em;
+		border: none;
+		border-radius: 100vmax;
+		font-size: var(--fs-button-big);
+		font-weight: $fw-medium;
+		text-decoration: none;
+		line-height: 1;
+		cursor: pointer;
+    
 		transition: all 0.2s;
 
-		cursor: pointer;
-	}
-
-	&__icon {
-		margin-left: $su-0-5;
-		fill: none;
-		stroke: $clr-black;
-		height: 2rem;
-		width: 2rem;
+		@include respond(md) {
+			padding: 1.1em 1.8em;
+			font-size: var(--fs-button);
+		}
 	}
 
 	&--primary {
-		padding: 1.5rem 2.8rem;
-		border-radius: 3rem;
 		background: $clr-primary-gradient;
 		background-size: 200%;
-		background-position-x: 100%;
+		background-position-x: 90%;
+		color: $clr-black;
 
-		@include respond(lg) {
-			padding: 1.1rem 2.2rem;
+		&:hover,
+		&:focus-visible {
+			background-position-x: 0;
 		}
 
-		&:hover {
-			background-position-x: 0%;
+		&[data-type='inverted'] {
+			border: 3px solid $clr-grey-900;
+			background: $clr-grey-900;
+			color: $clr-primary-500;
+
+			&:hover {
+				background-color: $clr-primary-500;
+				color: $clr-grey-900;
+			}
 		}
 	}
 
 	&--dark {
-		background-color: transparent;
-		border: 2px solid $clr-grey-600;
-		border-radius: 0.5rem;
-		height: 4rem;
-		width: 4rem;
-		transition: all 0.2s;
+		background-color: $clr-grey-800;
+		color: $clr-grey-500;
+
+		&:hover,
+		&:focus-visible {
+			background-color: $clr-grey-700;
+			color: $clr-grey-200;
+		}
+	}
+
+	&--outline {
+		background: transparent;
+		border: 3px solid $clr-grey-200;
+		color: currentColor;
 
 		&:hover {
-			border: 2px solid $clr-grey-500;
+			background-color: $clr-grey-200;
+			color: $clr-grey-900;
 		}
+	}
+}
 
-		@include respond(lg) {
-			display: none;
-		}
+.mobile-nav-toggle {
+	@include flex-center;
+
+	height: $size-600;
+	width: $size-600;
+	padding: 0.2rem;
+	border: 2px solid $clr-grey-500;
+	border-radius: $size-100;
+	background: transparent;
+
+	&:hover {
+		border: 2px solid $clr-grey-200;
+	}
+
+	@include respond(lg) {
+		display: none;
 	}
 }
