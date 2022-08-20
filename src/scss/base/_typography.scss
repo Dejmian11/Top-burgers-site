@@ -1,55 +1,53 @@
 @use '../abstracts' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
-
 body {
-	color: $clr-font;
-	font-family: $ff-body;
+	color: var(--clr-font);
+	font-family: var(--ff-body);
 	font-size: var(--fs-body);
-	font-weight: $fw-normal;
+	font-weight: var(--fw-normal);
 	line-height: 1.6;
 	text-align: center;
 }
 
 .heading {
-	color: $clr-heading;
+	color: var(--clr-heading);
+	font-weight: var(--fw-semi-bold);
 	text-transform: uppercase;
 	text-align: center;
-	font-weight: $fw-semi-bold;
-	line-height: 1.1;
 	letter-spacing: -0.1rem;
 
 	&-primary {
 		font-size: var(--fs-primary-heading);
+		line-height: 1.1;
 
 		@include respond(lg) {
 			text-align: left;
 		}
 	}
 
+	&-secondary,
+	&-tertiary {
+		line-height: 1.4;
+	}
+
 	&-secondary {
 		font-size: var(--fs-secondary-heading);
 	}
 
-  &-tertiary {
-    font-size: var(--fs-tertiary-heading);
-    font-weight: $fw-semi-bold;
+	&-tertiary {
+		font-size: var(--fs-tertiary-heading);
+		font-weight: var(--fw-semi-bold);
 
-    &--light {
-      color: $clr-grey-200;
-    }
+		&--light {
+			color: var(--clr-grey-200);
+		}
 
-    &--dark {
-      color: $clr-black;
-    }
+		&--dark {
+			color: var(--clr-black);
+		}
 
-    &--gold {
-      color: $clr-primary-500;
-    }
-  }
-}
-
-.description {
-  max-width: 60rem;
-  margin-inline: auto;
+		&--gold {
+			color: var(--clr-primary-500);
+		}
+	}
 }

@@ -2,7 +2,7 @@
 
 @keyframes moveVertically {
 	50% {
-		transform: translateY($size-200);
+		transform: translateY(var(--size-200));
 	}
 }
 

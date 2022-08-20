@@ -1,46 +1,69 @@
 @use 'mixins' as *;
 
-// COLORS
-$clr-primary-400: hsl(51, 100%, 64%);
-$clr-primary-500: hsl(51, 100%, 50%);
-$clr-primary-600: hsl(51, 100%, 42%);
+// ========================= GOOGLE FONTS =========================
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
 
-$clr-grey-200: hsl(0, 0%, 80%);
-$clr-grey-500: hsl(0, 0%, 47%);
-$clr-grey-700: hsl(0, 0%, 30%);
-$clr-grey-800: hsl(0, 0%, 20%);
-$clr-grey-900: hsl(0, 0%, 13%);
-
-$clr-black: hsl(0, 0%, 7%);
-$clr-white: hsl(0, 0%, 93%);
-
-// GRADIENTS
-$clr-primary-gradient: linear-gradient(
-	140deg,
-	$clr-primary-600 20%,
-	$clr-primary-500 48%,
-	$clr-primary-400 78%
-);
-
-// SHADOWS
-$shadow-primary: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-// FONT FAMILY
-$ff-body: 'Poppins', sans-serif;
-
-// FONT COLORS
-$clr-font: $clr-grey-200;
-$clr-heading: $clr-white;
-
-// FONT WEIGHTS
-$fw-normal: 400;
-$fw-medium: 500;
-$fw-semi-bold: 600;
-$fw-bold: 700;
-
-// FONT SIZES
-// 1 rem = 10px
+// ========================= VARIABLES CSS =========================
 :root {
+	// COLORS
+	--clr-primary-500-rgb: 255, 217, 0;
+	--clr-primary-600-rgb: 179, 152, 0;
+	--clr-black-rgb: 18, 18, 18;
+
+	--clr-primary-400: hsl(51, 100%, 64%);
+	--clr-primary-500: hsl(51, 100%, 50%);
+	--clr-primary-600: hsl(51, 100%, 35%);
+
+	--clr-grey-200: hsl(0, 0%, 80%);
+	--clr-grey-500: hsl(0, 0%, 47%);
+	--clr-grey-700: hsl(0, 0%, 30%);
+	--clr-grey-800: hsl(0, 0%, 20%);
+	--clr-grey-900: hsl(0, 0%, 13%);
+
+	--clr-black: hsl(0, 0%, 7%);
+	--clr-white: hsl(0, 0%, 93%);
+
+	// GRADIENTS
+	--clr-primary-gradient: linear-gradient(
+		140deg,
+		var(--clr-primary-600) 20%,
+		var(--clr-primary-500) 48%,
+		var(--clr-primary-400) 78%
+	);
+
+	// SHADOWS
+	--shadow-primary: rgba(var(--clr-black-rgb), 0.2) 0px 7px 29px 0px;
+
+	// FONT FAMILY
+	--ff-body: 'Poppins', sans-serif;
+
+	// FONT COLORS
+	--clr-font: var(--clr-grey-200);
+	--clr-heading: var(--clr-white);
+
+	// FONT WEIGHTS
+	--fw-normal: 400;
+	--fw-medium: 500;
+	--fw-semi-bold: 600;
+	--fw-bold: 700;
+
+	// Z-INDEX
+	--z-fixed: 100;
+	--z-modal: 1000;
+
+	// SPACING
+	--space-unit: 1rem; // 1rem = 10px
+	--size-100: calc(0.5 * var(--space-unit));
+	--size-200: calc(1 * var(--space-unit));
+	--size-300: calc(1.5 * var(--space-unit));
+	--size-400: calc(2 * var(--space-unit));
+	--size-500: calc(3 * var(--space-unit));
+	--size-600: calc(4 * var(--space-unit));
+	--size-700: calc(5 * var(--space-unit));
+	--size-800: calc(7 * var(--space-unit));
+	--size-900: calc(9 * var(--space-unit));
+
+	// FONT SIZES
 	--fs-100: 1.2rem;
 	--fs-200: 1.3rem;
 	--fs-300: 1.5rem;
@@ -57,7 +80,6 @@ $fw-bold: 700;
 	--fs-primary-heading: var(--fs-800);
 	--fs-secondary-heading: var(--fs-700);
 	--fs-tertiary-heading: var(--fs-600);
-
 	--fs-button: var(--fs-300);
 	--fs-button-big: var(--fs-600);
 	--fs-nav: var(--fs-600);
@@ -67,7 +89,6 @@ $fw-bold: 700;
 	@include respond(md) {
 		--fs-primary-heading: var(--fs-xl);
 		--fs-secondary-heading: var(--fs-900);
-
 		--fs-nav: var(--fs-400);
 		--fs-footer: var(--fs-200);
 	}
@@ -77,18 +98,6 @@ $fw-bold: 700;
 		--fs-body: var(--fs-500);
 		--fs-primary-heading: var(--fs-xxl);
 		--fs-secondary-heading: var(--fs-xl);
-
 		--fs-button: var(--fs-500);
 	}
 }
-
-// SIZES
-$size-100: 0.5rem;
-$size-200: 1rem;
-$size-300: 1.5rem;
-$size-400: 2rem;
-$size-500: 3rem;
-$size-600: 4rem;
-$size-700: 5rem;
-$size-800: 6rem;
-$size-900: 7rem;

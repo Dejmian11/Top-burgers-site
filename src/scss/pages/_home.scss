@@ -1,15 +1,15 @@
 @use '../abstracts' as *;
 
 // ===================HOME SECTION==================
-.home-section {
+.home {
 	display: flex;
 	align-items: flex-end;
 	min-height: max(100vh, 700px);
-	padding-block: 10rem $size-400;
+	padding-block: 10rem var(--size-400);
 	background-image: linear-gradient(
 			to bottom,
-			rgba($clr-black, 0.9),
-			rgba($clr-black, 0.9)
+			rgba(var(--clr-black-rgb), 0.9),
+			rgba(var(--clr-black-rgb), 0.9)
 		),
 		url(../images/background-home-1000.webp);
 	background-size: cover;
@@ -19,14 +19,12 @@
 		(min-width: 75em) {
 		background-image: linear-gradient(
 				to bottom,
-				rgba($clr-black, 0.9),
-				rgba($clr-black, 0.9)
+				rgba(var(--clr-black-rgb), 0.9),
+				rgba(var(--clr-black-rgb), 0.9)
 			),
 			url(../images/background-home-1500.webp);
 	}
-}
 
-.home {
 	&__content {
 		div:nth-child(2) {
 			@include respond(md) {
@@ -41,13 +39,9 @@
 	}
 
 	&__img {
-		max-width: 550px;
+		width: min(550px, 100%);
 		margin-inline: auto;
 		animation: fadeIn 1s linear;
-
-		@include respond(lg) {
-			max-width: 100%;
-		}
 	}
 
 	&__divider {
@@ -56,59 +50,104 @@
 		}
 	}
 
-	&__button {
-		margin-top: $size-600;
-	}
-
-	&__button-icon {
-		display: inline;
-		width: $size-400;
-		margin-left: $size-200;
-
-		@include respond(md) {
-			width: $size-300;
-		}
-	}
-
 	&__scroll {
 		justify-items: center;
-		margin-top: $size-700;
-
-		@include respond(lg) {
-			margin-top: $size-900;
-		}
+		margin-top: var(--size-700);
 
 		&-icon {
 			animation: moveVertically 1s linear infinite, fadeIn 1s linear;
 			transition: 0.2s all;
 
 			&:hover {
-				transform: scale(1.6);
+				transform: scale(1.2);
 			}
 		}
-	}
-}
-
-.features-section {
-	padding-block: $size-900;
-
-	@include respond(lg) {
-		padding-block: 8rem;
 	}
 }
 
 // =================FEATURES SECTION================
 .features__row {
 	justify-content: center;
-	gap: $size-500;
-	margin-top: $size-600;
+	gap: var(--size-500);
+	margin-top: var(--size-600);
 
 	@include respond(lg) {
-		gap: $size-900;
-		margin-top: $size-900;
+		gap: var(--size-800);
+		margin-top: var(--size-800);
 	}
 
 	@include respond(xl) {
 		gap: 9rem;
+	}
+}
+
+// ===================MENU SECTION==================
+.menu-section {
+	background-image: linear-gradient(
+			to bottom,
+			rgba(var(--clr-black-rgb), 0.8),
+			rgba(var(--clr-black-rgb), 0.9)
+		),
+		url(../images/background-menu-1000.webp);
+	background-size: cover;
+	background-position: top;
+
+	@media screen and (min-resolution: 192dpi) and (min-width: 48em),
+		(min-width: 75em) {
+		background-image: linear-gradient(
+				to bottom,
+				rgba(var(--clr-black-rgb), 0.8),
+				rgba(var(--clr-black-rgb), 0.9)
+			),
+			url(../images/background-menu-1500.webp);
+	}
+}
+
+.menu {
+	&__button-group {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		max-width: 40rem;
+		margin: var(--size-600) auto 0 auto;
+
+		@include respond(md) {
+			max-width: 70rem;
+		}
+
+		@include respond(lg) {
+			margin-top: var(--size-800);
+		}
+	}
+
+	&__button {
+		padding: 1em;
+
+		@include respond(md) {
+			padding: 1.1em 1.8em;
+			width: 15rem;
+		}
+
+		&[data-type='active'] span {
+			color: var(--clr-black);
+		}
+	}
+
+	&__button-text {
+		display: none;
+		width: 100%;
+
+		@include respond(md) {
+			display: inline;
+		}
+	}
+
+	&__button-icon {
+		width: var(--size-600);
+		height: var(--size-600);
+
+		@include respond(md) {
+			display: none;
+		}
 	}
 }

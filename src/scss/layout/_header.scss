@@ -2,34 +2,25 @@
 
 .header {
 	position: fixed;
-	z-index: 100;
 	width: 100vw;
-	background-color: $clr-black;
+	background-color: var(--clr-black);
+	z-index: var(--z-fixed);
 
 	@include respond(lg) {
 		background-color: transparent;
-	}
-
-	&--sticky {
-    background-color: $clr-black;
-    
-    & .header__container {
-      font-size: var(--fs-button);
-      padding-block: $size-200;
-    }
 	}
 
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-block: $size-200;
-
+		padding-block: var(--size-200);
+    
 		@include respond(lg) {
-			padding-block: $size-500;
+			padding-block: var(--size-500);
 		}
 	}
-
+  
 	&__logo {
 		width: 13rem;
 
@@ -39,10 +30,20 @@
 	}
 
 	&__button {
-		display: none;
+    display: none;
 
 		@include respond(lg) {
 			display: inline;
 		}
 	}
+
+  // SHRINK HEADER ON SCROLL
+  &--shrink {
+    background-color: var(--clr-black);
+    
+    & .header__container {
+      font-size: var(--fs-button);
+      padding-block: var(--size-200);
+    }
+  }
 }

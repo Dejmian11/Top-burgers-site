@@ -1,33 +1,35 @@
 @use '../abstracts' as *;
 
+@mixin button {
+	display: inline-flex;
+  align-items: center;
+	padding: 1.1em 1.8em;
+	border: none;
+	border-radius: 100vmax;
+	font-size: var(--fs-button);
+	font-weight: var(--fw-medium);
+	text-decoration: none;
+	text-transform: capitalize;
+	line-height: 1;
+	cursor: pointer;
+
+	transition: all 0.2s;
+}
+
 .button {
-	&,
-	&:link,
-	&:visited {
-		display: inline-flex;
-		align-items: center;
-		padding: 1.3em 2.8em;
-		border: none;
-		border-radius: 100vmax;
-		font-size: var(--fs-button-big);
-		font-weight: $fw-medium;
-		text-decoration: none;
-		line-height: 1;
-		cursor: pointer;
-    
-		transition: all 0.2s;
+  &--primary,
+  &--dark,
+  &--outline,
+  &[data-type='active'] {
+    @include button;
+  }
 
-		@include respond(md) {
-			padding: 1.1em 1.8em;
-			font-size: var(--fs-button);
-		}
-	}
-
-	&--primary {
-		background: $clr-primary-gradient;
+	&--primary,
+	&--dark[data-type='active'] {
+		background-image: var(--clr-primary-gradient);
 		background-size: 200%;
 		background-position-x: 90%;
-		color: $clr-black;
+		color: var(--clr-black);
 
 		&:hover,
 		&:focus-visible {
@@ -35,52 +37,58 @@
 		}
 
 		&[data-type='inverted'] {
-			border: 3px solid $clr-grey-900;
-			background: $clr-grey-900;
-			color: $clr-primary-500;
+			border: 3px solid var(--clr-grey-900);
+			background-color: var(--clr-grey-900);
+			color: var(--clr-primary-500);
 
 			&:hover {
-				background-color: $clr-primary-500;
-				color: $clr-grey-900;
+				background-color: var(--clr-primary-500);
+				color: var(--clr-grey-900);
 			}
 		}
 	}
 
 	&--dark {
-		background-color: $clr-grey-800;
-		color: $clr-grey-500;
+		background-color: var(--clr-grey-800);
+		color: var(--clr-grey-500);
 
 		&:hover,
 		&:focus-visible {
-			background-color: $clr-grey-700;
-			color: $clr-grey-200;
+			background-color: var(--clr-grey-700);
+			color: var(--clr-grey-200);
 		}
 	}
 
 	&--outline {
-		background: transparent;
-		border: 3px solid $clr-grey-200;
+		background-color: transparent;
+		border: 3px solid var(--clr-grey-200);
 		color: currentColor;
 
 		&:hover {
-			background-color: $clr-grey-200;
-			color: $clr-grey-900;
+			background-color: var(--clr-grey-200);
+			color: var(--clr-grey-900);
 		}
+	}
+
+  &-icon {
+		display: inline;
+		width: var(--size-300);
+		margin-left: var(--size-200);
 	}
 }
 
 .mobile-nav-toggle {
+  @include button;
 	@include flex-center;
-
-	height: $size-600;
-	width: $size-600;
+	height: var(--size-600);
+	width: var(--size-600);
 	padding: 0.2rem;
-	border: 2px solid $clr-grey-500;
-	border-radius: $size-100;
-	background: transparent;
+	border: 2px solid var(--clr-grey-500);
+	border-radius: var(--size-100);
+	background-color: transparent;
 
 	&:hover {
-		border: 2px solid $clr-grey-200;
+		border: 2px solid var(--clr-grey-200);
 	}
 
 	@include respond(lg) {

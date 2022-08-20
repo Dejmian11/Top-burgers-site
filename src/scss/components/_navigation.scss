@@ -4,7 +4,7 @@
 	&--primary {
 		display: none;
 		margin-left: auto;
-		margin-right: $size-800;
+		margin-right: var(--size-800);
 
 		@include respond(lg) {
 			display: block;
@@ -14,17 +14,17 @@
 	&__list {
 		display: grid;
 		grid-auto-flow: column;
-		gap: $size-800;
+		gap: var(--size-800);
 	}
 
 	&__link {
 		text-decoration: none;
-		color: $clr-font;
+		color: var(--clr-font);
 		transition: 0.2s all;
 
 		&:hover,
     &:focus {
-			color: $clr-primary-500;
+			color: var(--clr-primary-400);
 		}
 	}
 }
