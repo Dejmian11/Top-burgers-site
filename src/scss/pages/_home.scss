@@ -1,15 +1,15 @@
 @use '../abstracts' as *;
 
-// ===================HOME SECTION==================
+// =================== HOME SECTION ==================
 .home {
 	display: flex;
-	align-items: flex-end;
+	align-items: stretch;
 	min-height: max(100vh, 700px);
-	padding-block: 10rem var(--size-400);
+	padding-block: 6.25rem var(--su-400);
 	background-image: linear-gradient(
 			to bottom,
-			rgba(var(--clr-black-rgb), 0.9),
-			rgba(var(--clr-black-rgb), 0.9)
+			rgba(var(--clr-neutral-100-rgb), 0.9),
+			rgba(var(--clr-neutral-100-rgb), 0.9)
 		),
 		url(../images/background-home-1000.webp);
 	background-size: cover;
@@ -19,14 +19,22 @@
 		(min-width: 75em) {
 		background-image: linear-gradient(
 				to bottom,
-				rgba(var(--clr-black-rgb), 0.9),
-				rgba(var(--clr-black-rgb), 0.9)
+				rgba(var(--clr-neutral-100-rgb), 0.9),
+				rgba(var(--clr-neutral-100-rgb), 0.9)
 			),
 			url(../images/background-home-1500.webp);
 	}
 
+	&__container {
+		display: grid;
+	}
+
 	&__content {
-		div:nth-child(2) {
+		align-items: center;
+
+		.flow {
+			--flow-space: var(--su-600);
+
 			@include respond(md) {
 				grid-column: 1;
 				animation: fadeInLeft 1s linear;
@@ -44,49 +52,54 @@
 		animation: fadeIn 1s linear;
 	}
 
-	&__divider {
-		@include respond(lg) {
-			margin-left: 0;
-		}
-	}
-
 	&__scroll {
+		display: grid;
 		justify-items: center;
-		margin-top: var(--size-700);
+		align-items: end;
+		margin-top: var(--su-700);
+
+		@include respond(lg) {
+			margin-top: 0;
+		}
 
 		&-icon {
+			width: var(--su-700);
+			height: var(--su-700);
+			fill: var(--clr-neutral-900);
 			animation: moveVertically 1s linear infinite, fadeIn 1s linear;
 			transition: 0.2s all;
 
 			&:hover {
-				transform: scale(1.2);
+				scale: 1.2;
 			}
 		}
 	}
 }
 
-// =================FEATURES SECTION================
-.features__row {
+// ================= FEATURES SECTION ================
+.features-group {
 	justify-content: center;
-	gap: var(--size-500);
-	margin-top: var(--size-600);
+	gap: var(--su-600);
+	margin-top: var(--su-700);
 
 	@include respond(lg) {
-		gap: var(--size-800);
-		margin-top: var(--size-800);
+		gap: var(--su-800);
+		margin-top: var(--su-800);
 	}
 
 	@include respond(xl) {
-		gap: 9rem;
+		gap: 5.8rem;
 	}
 }
 
-// ===================MENU SECTION==================
-.menu-section {
+// =================== MENU SECTION ==================
+.menu {
+	position: relative;
+	overflow: hidden;
 	background-image: linear-gradient(
 			to bottom,
-			rgba(var(--clr-black-rgb), 0.8),
-			rgba(var(--clr-black-rgb), 0.9)
+			rgba(var(--clr-neutral-100-rgb), 0.8),
+			rgba(var(--clr-neutral-100-rgb), 0.9)
 		),
 		url(../images/background-menu-1000.webp);
 	background-size: cover;
@@ -96,58 +109,74 @@
 		(min-width: 75em) {
 		background-image: linear-gradient(
 				to bottom,
-				rgba(var(--clr-black-rgb), 0.8),
-				rgba(var(--clr-black-rgb), 0.9)
+				rgba(var(--clr-neutral-100-rgb), 0.8),
+				rgba(var(--clr-neutral-100-rgb), 0.9)
 			),
 			url(../images/background-menu-1500.webp);
 	}
+
+	&__bg-image {
+		position: absolute;
+		filter: blur(1px);
+		display: none;
+
+		@include respond(xl) {
+			display: block;
+		}
+
+		&--1 {
+			max-width: 19rem;
+			top: 20%;
+			left: 4vw;
+			rotate: 13deg;
+		}
+
+		&--2 {
+			max-width: 20rem;
+			top: 15%;
+			left: 72vw;
+			rotate: 250deg;
+		}
+
+		&--3 {
+			max-width: 15rem;
+			top: 78%;
+			left: 10vw;
+		}
+	}
 }
 
-.menu {
-	&__button-group {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		max-width: 40rem;
-		margin: var(--size-600) auto 0 auto;
+// =================== STATS SECTION ==================
+.stats {
+  padding-block: var(--su-800);
 
-		@include respond(md) {
-			max-width: 70rem;
-		}
+  & .even-columns {
+    --even-columns-gap: var(--su-800);
+  }
 
-		@include respond(lg) {
-			margin-top: var(--size-800);
-		}
-	}
+  &__number {
+    font-size: var(--fs-xl);
+    line-height: 1;
 
-	&__button {
-		padding: 1em;
+    @include respond(md) {
+      font-size: var(--fs-xxl);
+    }
+  }
 
-		@include respond(md) {
-			padding: 1.1em 1.8em;
-			width: 15rem;
-		}
+  &__desc {
+    text-transform: uppercase;
+    font-weight: var(--fw-semi-bold);
+  }
+}
 
-		&[data-type='active'] span {
-			color: var(--clr-black);
-		}
-	}
+// =================== INFO SECTION ==================
+.info {
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-height: max(90vh, 400px);
 
-	&__button-text {
-		display: none;
-		width: 100%;
-
-		@include respond(md) {
-			display: inline;
-		}
-	}
-
-	&__button-icon {
-		width: var(--size-600);
-		height: var(--size-600);
-
-		@include respond(md) {
-			display: none;
-		}
-	}
+  & .flow {
+    --flow-space: var(--su-600)
+  }
 }

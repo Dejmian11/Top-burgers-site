@@ -4,7 +4,7 @@
 	&--primary {
 		display: none;
 		margin-left: auto;
-		margin-right: var(--size-800);
+		margin-right: var(--su-800);
 
 		@include respond(lg) {
 			display: block;
@@ -14,7 +14,7 @@
 	&__list {
 		display: grid;
 		grid-auto-flow: column;
-		gap: var(--size-800);
+		gap: var(--su-800);
 	}
 
 	&__link {

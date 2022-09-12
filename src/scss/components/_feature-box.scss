@@ -1,40 +1,47 @@
 @use '../abstracts' as *;
 
 .feature-box {
-	max-width: 40rem;
-	border-radius: var(--size-100);
+	max-width: 30rem;
+	border-radius: var(--su-100);
 	overflow: hidden;
+	transition: scale 0.5s ease, translate 0.5s ease;
 
-	transition: transform 0.5s ease;
-
-	&:hover {
-		transform: scale(1.05);
+	&:hover,
+	&:focus-within {
+		scale: 1.05;
 
 		& .feature-box__content {
-			transform: translateY(0);
+			translate: 0;
 			transition-delay: 0.5s;
 		}
 
 		& .feature-box__icon {
-			transform: translateX(-300%);
+			translate: -300%;
 			opacity: 0;
 		}
 	}
 
-	.feature-box__content > *:not(.heading-tertiary, .feature-box__icon) {
+	.feature-box__content > .flow > *:not(.heading-tertiary, .feature-box__icon) {
 		@include respond(lg) {
 			opacity: 0;
 			transition: opacity 0.5s linear;
 		}
 	}
 
-	&:hover .feature-box__content > *:not(.heading-tertiary, .feature-box__ico) {
+	&:hover
+		.feature-box__content
+		> .flow
+		> *:not(.heading-tertiary, .feature-box__ico),
+	&:focus-within
+		.feature-box__content
+		> .flow
+		> *:not(.heading-tertiary, .feature-box__ico) {
 		opacity: 1;
-		transition-delay: 0.3s;
+		transition-delay: 0.75s;
 	}
 
 	@include respond(lg) {
-		height: 40rem;
+		height: 25rem;
 	}
 
 	&--1 {
@@ -51,19 +58,21 @@
 
 	&__content {
 		position: relative;
-		padding: var(--size-600) var(--size-500);
+		padding: var(--su-600);
 		background-image: linear-gradient(
 			to bottom,
-			rgba(var(--clr-primary-500-rgb), 0.8),
-			rgba(var(--clr-primary-500-rgb), 0.9)
+			rgba(var(--clr-primary-400-rgb), 0.8),
+			rgba(var(--clr-primary-400-rgb), 0.9)
 		);
 
 		@include respond(lg) {
+			--flow-space: var(--su-600);
+
 			height: 100%;
 			text-align: left;
-			transform: translateY(77%);
+			translate: 0 77%;
 
-			transition: transform 0.5s ease;
+			transition: translate 0.5s ease;
 		}
 	}
 
@@ -76,9 +85,9 @@
 		@include respond(lg) {
 			position: absolute;
 			top: 0;
-			transform: translateY(-50%);
+			translate: 0 -50%;
 			display: block;
-			padding: 1.25rem;
+			padding: var(--su-300);
 			background-image: var(--clr-primary-gradient);
 			border-radius: 50%;
 			box-shadow: var(--shadow-primary);
@@ -89,15 +98,17 @@
 
 	&__icon svg {
 		@include respond(lg) {
+			width: var(--su-500);
+			height: var(--su-500);
 			display: block;
 		}
 	}
 
-	&__text {
-		margin-top: var(--size-400);
+	&__description {
+		margin-top: var(--su-400);
 
 		@include respond(lg) {
-			margin-top: var(--size-500);
+			margin-top: var(--su-500);
 		}
 	}
 }

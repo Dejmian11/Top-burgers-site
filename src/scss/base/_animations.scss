@@ -2,7 +2,7 @@
 
 @keyframes moveVertically {
 	50% {
-		transform: translateY(var(--size-200));
+		translate: 0 var(--su-200);
 	}
 }
 
@@ -19,11 +19,11 @@
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-30vh);
+    translate: -30vh;
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    translate: 0;
   }
 }

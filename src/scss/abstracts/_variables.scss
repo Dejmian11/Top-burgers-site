@@ -6,40 +6,39 @@
 // ========================= VARIABLES CSS =========================
 :root {
 	// COLORS
-	--clr-primary-500-rgb: 255, 217, 0;
-	--clr-primary-600-rgb: 179, 152, 0;
-	--clr-black-rgb: 18, 18, 18;
+	--clr-primary-400-rgb: 255, 217, 0;
+	--clr-primary-500-rgb: 179, 152, 0;
+	--clr-neutral-100-rgb: 18, 18, 18;
 
-	--clr-primary-400: hsl(51, 100%, 64%);
-	--clr-primary-500: hsl(51, 100%, 50%);
-	--clr-primary-600: hsl(51, 100%, 35%);
+	--clr-primary-300: hsl(51, 100%, 64%);
+	--clr-primary-400: hsl(51, 100%, 50%);
+	--clr-primary-500: hsl(51, 100%, 35%);
 
-	--clr-grey-200: hsl(0, 0%, 80%);
-	--clr-grey-500: hsl(0, 0%, 47%);
-	--clr-grey-700: hsl(0, 0%, 30%);
-	--clr-grey-800: hsl(0, 0%, 20%);
-	--clr-grey-900: hsl(0, 0%, 13%);
-
-	--clr-black: hsl(0, 0%, 7%);
-	--clr-white: hsl(0, 0%, 93%);
+	--clr-neutral-100: hsl(0, 0%, 7%);
+	--clr-neutral-200: hsl(0, 0%, 13%);
+	--clr-neutral-300: hsl(0, 0%, 20%);
+	--clr-neutral-400: hsl(0, 0%, 30%);
+	--clr-neutral-500: hsl(0, 0%, 47%);
+	--clr-neutral-800: hsl(0, 0%, 80%);
+	--clr-neutral-900: hsl(0, 0%, 93%);
 
 	// GRADIENTS
 	--clr-primary-gradient: linear-gradient(
 		140deg,
-		var(--clr-primary-600) 20%,
-		var(--clr-primary-500) 48%,
-		var(--clr-primary-400) 78%
+		var(--clr-primary-500) 20%,
+		var(--clr-primary-400) 48%,
+		var(--clr-primary-300) 78%
 	);
 
 	// SHADOWS
-	--shadow-primary: rgba(var(--clr-black-rgb), 0.2) 0px 7px 29px 0px;
+	--shadow-primary: rgba(var(--clr-neutral-900-rgb), 0.2) 0 0.4em 1.8em 0;
 
 	// FONT FAMILY
 	--ff-body: 'Poppins', sans-serif;
 
 	// FONT COLORS
-	--clr-font: var(--clr-grey-200);
-	--clr-heading: var(--clr-white);
+	--clr-font: var(--clr-neutral-800);
+	--clr-heading: var(--clr-neutral-900);
 
 	// FONT WEIGHTS
 	--fw-normal: 400;
@@ -52,34 +51,34 @@
 	--z-modal: 1000;
 
 	// SPACING
-	--space-unit: 1rem; // 1rem = 10px
-	--size-100: calc(0.5 * var(--space-unit));
-	--size-200: calc(1 * var(--space-unit));
-	--size-300: calc(1.5 * var(--space-unit));
-	--size-400: calc(2 * var(--space-unit));
-	--size-500: calc(3 * var(--space-unit));
-	--size-600: calc(4 * var(--space-unit));
-	--size-700: calc(5 * var(--space-unit));
-	--size-800: calc(7 * var(--space-unit));
-	--size-900: calc(9 * var(--space-unit));
+	--space-unit: 1rem; 
+	--su-100: calc(0.25 * var(--space-unit));
+	--su-200: calc(.5 * var(--space-unit));
+	--su-300: calc(.75 * var(--space-unit));
+	--su-400: calc(1 * var(--space-unit));
+	--su-500: calc(1.5 * var(--space-unit));
+	--su-600: calc(2 * var(--space-unit));
+	--su-700: calc(3 * var(--space-unit));
+	--su-800: calc(4 * var(--space-unit));
+	--su-900: calc(5 * var(--space-unit));
 
 	// FONT SIZES
-	--fs-100: 1.2rem;
-	--fs-200: 1.3rem;
-	--fs-300: 1.5rem;
-	--fs-400: 1.6rem;
-	--fs-500: 1.7rem;
-	--fs-600: 2.1rem;
-	--fs-700: 3.8rem;
-	--fs-800: 4.2rem;
-	--fs-900: 5.4rem;
-	--fs-xl: 6rem;
-	--fs-xxl: 7.7rem;
+	--fs-100: .75rem;
+	--fs-200: .8rem;
+	--fs-300: .9rem;
+	--fs-400: 1rem;
+	--fs-500: 1.05rem;
+	--fs-600: 1.3rem;
+	--fs-700: 2.3rem;
+	--fs-800: 2.6rem;
+	--fs-900: 3.3rem;
+	--fs-xl: 3.75rem;
+	--fs-xxl: 4.8rem;
 
 	--fs-body: var(--fs-400);
-	--fs-primary-heading: var(--fs-800);
-	--fs-secondary-heading: var(--fs-700);
-	--fs-tertiary-heading: var(--fs-600);
+	--fs-heading-primary: var(--fs-800);
+	--fs-heading-secondary: var(--fs-700);
+	--fs-heading-tertiary: var(--fs-600);
 	--fs-button: var(--fs-300);
 	--fs-button-big: var(--fs-600);
 	--fs-nav: var(--fs-600);
@@ -87,8 +86,8 @@
 
 	// min-width: 576px
 	@include respond(md) {
-		--fs-primary-heading: var(--fs-xl);
-		--fs-secondary-heading: var(--fs-900);
+		--fs-heading-primary: var(--fs-xl);
+		--fs-heading-secondary: var(--fs-900);
 		--fs-nav: var(--fs-400);
 		--fs-footer: var(--fs-200);
 	}
@@ -96,8 +95,11 @@
 	// min-width: 992px
 	@include respond(xl) {
 		--fs-body: var(--fs-500);
-		--fs-primary-heading: var(--fs-xxl);
-		--fs-secondary-heading: var(--fs-xl);
+		--fs-heading-primary: var(--fs-xxl);
+		--fs-heading-secondary: var(--fs-xl);
 		--fs-button: var(--fs-500);
 	}
+
+  // BUTTONS
+  --btn-border-radius: 100vmax;
 }

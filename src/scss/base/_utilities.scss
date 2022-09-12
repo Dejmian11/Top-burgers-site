@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 // VISUALLY HIDDEN
-.u-visuallyHidden {
+.visually-hidden {
 	position: absolute;
 	position: absolute !important;
 	width: 1px !important;
@@ -15,28 +15,33 @@
 }
 
 // COLORS
-.u-clrPrimary {
-	color: var(--clr-primary-500);
+.clr-primary-400 {
+	color: var(--clr-primary-400);
 }
 
-.u-clrBlack {
-	color: var(--clr-black);
+.clr-neutral-100 {
+	color: var(--clr-neutral-100);
 }
 
 // FONT WEIGHTS
-.u-fwBold {
+.fw-bold {
 	font-weight: var(--fw-bold);
 }
 
+// TEXT ALIGN
+.align-left {
+  text-align: left;
+}
+
 // BACKGROUND COLORS
-.u-bgPrimary {
-	background-color: var(--clr-primary-500);
+.bg-primary-400 {
+	background-color: var(--clr-primary-400);
 }
 
-.u-bgBlack {
-	background-color: var(--clr-black);
+.bg-neutral-100 {
+	background-color: var(--clr-neutral-100);
 }
 
-.u-bgGrey {
-	background-color: var(--clr-grey-900);
+.bg-neutral-300 {
+	background-color: var(--clr-neutral-300);
 }

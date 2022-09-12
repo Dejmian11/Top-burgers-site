@@ -1,35 +1,21 @@
 @use '../abstracts' as *;
 
-// DIVIDER
-.divider {
-  width: clamp(6rem, 50%, 40rem);
-	height: 0.2rem;
-	margin-inline: auto;
-	border-radius: 100vmax;
-	background-color: var(--clr-primary-500);
-
-	@include respond(sm) {
-		height: 0.3rem;
-	}
-}
-
 // SECTION
 .section {
-	padding-block: var(--size-700);
+	padding-block: var(--su-800);
 
-	@include respond(lg) {
-		padding-block: var(--size-800);
-	}
+  @include respond(lg) {
+    padding-bottom: var(--su-900);
+  }
 
-	&__description {
-		max-width: 60rem;
-		margin: 0 auto var(--size-700) auto;
+	&__header {
+		--flow-space: 3rem;
 	}
 }
 
 // CONTAINER
 .container {
-	padding-inline: var(--size-300);
+	padding-inline: var(--su-300);
 
 	@include respond(sm) {
 		margin-inline: auto;
@@ -51,9 +37,9 @@
 }
 
 //GRID
-.row {
+.even-columns {
 	display: grid;
-	gap: var(--size-400);
+	gap: var(--even-columns-gap, --su-300);
 
 	@include respond(lg) {
 		grid-auto-flow: column;
@@ -62,10 +48,6 @@
 }
 
 // FLOW
-:where(.flow :not(:last-child)) {
-	margin-bottom: var(--size-300);
-
-	@include respond(lg) {
-		margin-bottom: var(--size-400);
-	}
+.flow > * + * {
+	margin-top: var(--flow-space, 1em);
 }

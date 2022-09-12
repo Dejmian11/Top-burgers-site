@@ -1,0 +1,68 @@
+@use '../abstracts' as *;
+
+.tab {
+	&__btn-group {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		max-width: min(80%, 20rem);
+		margin: var(--su-700) auto;
+    list-style: none;
+
+		@include respond(md) {
+			max-width: 43rem;
+		}
+
+		@include respond(lg) {
+			margin: var(--su-800) auto var(--su-900) auto;
+		}
+	}
+
+	&__btn {
+		padding: 1em;
+
+		@include respond(md) {
+			padding: 1.1em 1.8em;
+			width: 10em;
+		}
+
+		&[data-type='active'] span {
+			color: var(--clr-black);
+		}
+	}
+
+	&__btn-text {
+		display: none;
+		width: 100%;
+
+		@include respond(md) {
+			display: inline;
+		}
+	}
+
+	&__btn-icon--big {
+		width: var(--su-600);
+		height: var(--su-600);
+
+		@include respond(md) {
+			display: none;
+		}
+	}
+
+	&__content {
+		position: relative;
+		display: grid;
+		justify-content: center;
+		column-gap: var(--su-700);
+		row-gap: var(--su-800);
+		margin-bottom: var(--su-700);
+
+		@include respond(md) {
+			grid-template-columns: repeat(auto-fit, 18rem);
+		}
+
+		@include respond(lg) {
+			margin-bottom: var(--su-900);
+		}
+	}
+}
