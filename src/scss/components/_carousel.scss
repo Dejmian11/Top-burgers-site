@@ -1,0 +1,41 @@
+.carousel {
+	display: grid;
+	grid-template-rows: 1fr 5rem;
+	grid-auto-flow: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: var(--su-900);
+	&__track {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: var(--su-400);
+	}
+
+	&__btn {
+		display: none;
+		grid-row: 1;
+		max-width: 5rem;
+
+		&--left {
+		}
+
+		&--right {
+		}
+
+		&-icon {
+		}
+	}
+
+	&__track {
+		grid-column: 2 / 3;
+	}
+
+	&__nav {
+		grid-row: 2;
+		grid-column: 2 / 3;
+	}
+
+	&__indicator {
+	}
+}

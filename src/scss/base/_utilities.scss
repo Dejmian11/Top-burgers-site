@@ -30,7 +30,7 @@
 
 // TEXT ALIGN
 .align-left {
-  text-align: left;
+	text-align: left;
 }
 
 // BACKGROUND COLORS
@@ -40,6 +40,10 @@
 
 .bg-neutral-100 {
 	background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-200 {
+	background-color: var(--clr-neutral-200);
 }
 
 .bg-neutral-300 {

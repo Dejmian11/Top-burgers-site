@@ -39,7 +39,7 @@
 //GRID
 .even-columns {
 	display: grid;
-	gap: var(--even-columns-gap, --su-300);
+	gap: var(--su-300);
 
 	@include respond(lg) {
 		grid-auto-flow: column;

@@ -104,8 +104,9 @@
 		}
 	}
 
-	&__description {
+	& .desc {
 		margin-top: var(--su-400);
+    color: var(--clr-neutral-100);
 
 		@include respond(lg) {
 			margin-top: var(--su-500);

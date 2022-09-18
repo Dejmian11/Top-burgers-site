@@ -83,7 +83,7 @@
 	margin-top: var(--su-700);
 
 	@include respond(lg) {
-		gap: var(--su-800);
+		gap: var(--su-600);
 		margin-top: var(--su-800);
 	}
 
@@ -148,35 +148,63 @@
 
 // =================== STATS SECTION ==================
 .stats {
-  padding-block: var(--su-800);
+	padding-block: var(--su-800);
 
-  & .even-columns {
-    --even-columns-gap: var(--su-800);
-  }
+	& .even-columns {
+		--even-columns-gap: var(--su-800);
+	}
 
-  &__number {
-    font-size: var(--fs-xl);
-    line-height: 1;
+	&__number {
+		font-size: var(--fs-xl);
+		line-height: 1;
 
-    @include respond(md) {
-      font-size: var(--fs-xxl);
-    }
-  }
+		@include respond(md) {
+			font-size: var(--fs-xxl);
+		}
+	}
 
-  &__desc {
-    text-transform: uppercase;
-    font-weight: var(--fw-semi-bold);
-  }
+	&__desc {
+		text-transform: uppercase;
+		font-weight: var(--fw-semi-bold);
+	}
 }
 
 // =================== INFO SECTION ==================
 .info {
-  display: grid;
-  place-items: center;
-  position: relative;
-  min-height: max(90vh, 400px);
+	@include flex-center;
+	position: relative;
+	min-height: max(100vh, 400px);
 
-  & .flow {
-    --flow-space: var(--su-600)
-  }
+	& .flow {
+		--flow-space: var(--su-600);
+	}
+}
+
+// ================ TESTIMONIAL SECTION ===============
+.testimonial {
+}
+
+// ==================== CTA SECTION ===================
+.cta {
+  padding-block: var(--su-800);
+
+	&__content {
+		grid-gap: var(--su-600);
+
+		@include respond(lg) {
+			grid-template-columns: 3fr 2fr;
+		}
+    
+		& > div {
+      display: flex;
+			align-items: center;
+      justify-content: center;
+		}
+
+		@include respond(lg) {
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
 }
