@@ -25,8 +25,10 @@
 			url(../images/background-home-1500.webp);
 	}
 
-	&__container {
+	&-container {
 		display: grid;
+		align-items: center;
+		height: 100%;
 	}
 
 	&__content {
@@ -53,9 +55,9 @@
 	}
 
 	&__scroll {
+		align-self: end;
 		display: grid;
 		justify-items: center;
-		align-items: end;
 		margin-top: var(--su-700);
 
 		@include respond(lg) {
@@ -104,6 +106,7 @@
 		url(../images/background-menu-1000.webp);
 	background-size: cover;
 	background-position: top;
+	background-attachment: fixed;
 
 	@media screen and (min-resolution: 192dpi) and (min-width: 48em),
 		(min-width: 75em) {
@@ -173,7 +176,7 @@
 .info {
 	@include flex-center;
 	position: relative;
-	min-height: max(100vh, 400px);
+  height: clamp(500px, 100vh, 1700px);
 
 	& .flow {
 		--flow-space: var(--su-600);
@@ -186,7 +189,7 @@
 
 // ==================== CTA SECTION ===================
 .cta {
-  padding-block: var(--su-800);
+	padding-block: var(--su-800);
 
 	&__content {
 		grid-gap: var(--su-600);
@@ -194,11 +197,11 @@
 		@include respond(lg) {
 			grid-template-columns: 3fr 2fr;
 		}
-    
+
 		& > div {
-      display: flex;
+			display: flex;
 			align-items: center;
-      justify-content: center;
+			justify-content: center;
 		}
 
 		@include respond(lg) {
@@ -206,5 +209,42 @@
 				text-align: left;
 			}
 		}
+	}
+}
+
+// =================== CONTACT SECTION =================
+.contact {
+	padding-block: 0;
+
+	& .even-columns {
+		gap: 0;
+	}
+
+	&__content {
+		position: relative;
+		min-height: 300px;
+		overflow: hidden;
+
+		&:hover .contact__img {
+			scale: 1.1;
+		}
+	}
+
+	&__img {
+		filter: brightness(40%);
+		transition: scale 0.4s;
+	}
+
+	&__info {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+	}
+
+	&__icon {
+		margin-inline: auto;
+		width: 7rem;
+		fill: var(--clr-neutral-900);
 	}
 }

@@ -18,38 +18,40 @@
 	<body>
 		<!-- ========================== HEADER ========================== -->
 		<header class="header">
-			<div class="header__container container">
-				<a href="#home" class="header__logo">
-					<img src="images/logo.webp" alt="Top-Burgers" />
-				</a>
+			<div class="wrapper">
+				<div class="header-container">
+					<a href="#home" class="header__logo">
+						<img src="images/logo.webp" alt="Top-Burgers" />
+					</a>
 
-				<a href="#main" class="skip-nav-link"> Pomiń nawigację </a>
+					<a href="#main" class="skip-nav-link"> Pomiń nawigację </a>
 
-				<button class="mobile-nav-toggle" aria-controls="nav-primary">
-					<svg>
-						<use xlink:href="images/icons/sprite.svg#icon-menu"></use>
-					</svg>
-					<span class="visually-hidden">Menu</span>
-				</button>
+					<button class="mobile-nav-toggle" aria-controls="nav-primary">
+						<svg>
+							<use xlink:href="images/icons/sprite.svg#icon-menu"></use>
+						</svg>
+						<span class="visually-hidden">Menu</span>
+					</button>
 
-				<nav class="nav nav--primary" id="nav-primary">
-					<ul class="nav__list" role="list" aria-label="Główne">
-						<li class="nav__item">
-							<a href="#home" class="nav__link">Strona główna</a>
-						</li>
-						<li class="nav__item">
-							<a href="#features" class="nav__link">O Nas</a>
-						</li>
-						<li class="nav__item">
-							<a href="#menu" class="nav__link">Menu</a>
-						</li>
-						<li class="nav__item">
-							<a href="#" class="nav__link">Kontakt</a>
-						</li>
-					</ul>
-				</nav>
+					<nav class="nav nav--primary" id="nav-primary">
+						<ul class="nav__list" role="list" aria-label="Główne">
+							<li class="nav__item">
+								<a href="#home" class="nav__link">Strona główna</a>
+							</li>
+							<li class="nav__item">
+								<a href="#features" class="nav__link">O Nas</a>
+							</li>
+							<li class="nav__item">
+								<a href="#menu" class="nav__link">Menu</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Kontakt</a>
+							</li>
+						</ul>
+					</nav>
 
-				<button class="header__btn btn btn--primary">Zamów online</button>
+					<button class="header__btn btn btn--primary">Zamów online</button>
+				</div>
 			</div>
 		</header>
 
@@ -57,62 +59,64 @@
 		<main class="main" id="main">
 			<!-- ============================= HOME ============================= -->
 			<section class="home section" id="home">
-				<div class="home__container container">
-					<div class="home__content even-columns">
-						<div>
-							<img
-								class="home__img"
-								srcset="
-									images/burger-500.webp   500w,
-									images/burger-1000.webp 1000w,
-									images/burger-1500.webp 1500w
-								"
-								sizes="(max-width: 62em) 90vw, 630px"
-								src="images/burger-1000.webp"
-								alt="Burger"
-							/>
+				<div class="wrapper">
+					<div class="home-container">
+						<div class="home__content even-columns">
+							<div>
+								<img
+									class="home__img"
+									srcset="
+										images/burger-500.webp   500w,
+										images/burger-1000.webp 1000w,
+										images/burger-1500.webp 1500w
+									"
+									sizes="(max-width: 62em) 90vw, 630px"
+									src="images/burger-1000.webp"
+									alt="Burger"
+								/>
+							</div>
+
+							<div class="flow">
+								<h1
+									class="heading-primary"
+									aria-label="Wyjątkowe burgery dla smakoszy"
+								>
+									Wyjątkowe burgery dla
+									<span class="clr-primary-400 fw-bold">smakoszy</span>
+								</h1>
+								<p class="desc">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+									suscipit inventore voluptates asperiores atque animi sit minus
+									itaque in repellendus, id nisi accusamus similique aliquid!
+								</p>
+								<a class="btn btn--primary" href="#"
+									>Nasze Menu
+									<svg class="btn-icon--small">
+										<use
+											xlink:href="images/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</a>
+							</div>
 						</div>
 
-						<div class="flow">
-							<h1
-								class="heading-primary"
-								aria-label="Wyjątkowe burgery dla smakoszy"
-							>
-								Wyjątkowe burgery dla
-								<span class="clr-primary-400 fw-bold">smakoszy</span>
-							</h1>
-							<p class="desc">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-								suscipit inventore voluptates asperiores atque animi sit minus
-								itaque in repellendus, id nisi accusamus similique aliquid!
-							</p>
-							<a class="btn btn--primary" href="#"
-								>Nasze Menu
-								<svg class="btn-icon--small">
+						<div class="home__scroll">
+							<a href="#features">
+								<svg class="home__scroll-icon">
 									<use
 										xlink:href="images/icons/sprite.svg#icon-chevron-down"
 									></use>
 								</svg>
+								<span class="visually-hidden">Przewiń w dół</span>
 							</a>
 						</div>
-					</div>
-
-					<div class="home__scroll">
-						<a href="#features">
-							<svg class="home__scroll-icon">
-								<use
-									xlink:href="images/icons/sprite.svg#icon-chevron-down"
-								></use>
-							</svg>
-							<span class="visually-hidden">Przewiń w dół</span>
-						</a>
 					</div>
 				</div>
 			</section>
 
 			<!-- =========================== FEATURES =========================== -->
 			<section class="features section bg-neutral-100" id="features">
-				<div class="container">
+				<div class="wrapper">
 					<div class="section__header flow">
 						<h2 class="heading-secondary">
 							Witamy w top <span class="clr-primary-400">burgers</span>!
@@ -194,7 +198,7 @@
 
 			<!-- ============================= MENU ============================= -->
 			<section class="menu section" id="menu">
-				<div class="container">
+				<div class="wrapper">
 					<img
 						src="images/paprika.png"
 						class="menu__bg-image menu__bg-image--1"
@@ -255,14 +259,12 @@
 							<!-- MENU ITEM 1 -->
 							<div class="menu-item">
 								<p class="menu-item__price heading-tertiary">20.00 zł</p>
-
 								<button class="menu-item__btn btn">
 									<svg>
 										<use xlink:href="images/icons/sprite.svg#icon-plus"></use>
 									</svg>
 									<span class="visually-hidden">Dodaj do koszyka</span>
 								</button>
-
 								<img
 									class="menu-item__img"
 									srcset="
@@ -272,9 +274,7 @@
 									src="images/cheeseburger-300.webp"
 									alt="Cheeseburger"
 								/>
-
 								<p class="heading-tertiary">Cheeseburger</p>
-
 								<p class="desc">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 									Possimus, labore.
@@ -284,14 +284,12 @@
 							<!-- MENU ITEM 2 -->
 							<div class="menu-item">
 								<p class="menu-item__price heading-tertiary">20.00 zł</p>
-
 								<button class="menu-item__btn btn">
 									<svg>
 										<use xlink:href="images/icons/sprite.svg#icon-plus"></use>
 									</svg>
 									<span class="visually-hidden">Dodaj do koszyka</span>
 								</button>
-
 								<img
 									class="menu-item__img"
 									srcset="
@@ -301,9 +299,7 @@
 									src="images/cheeseburger-300.webp"
 									alt="Cheeseburger"
 								/>
-
 								<p class="heading-tertiary">Cheeseburger</p>
-
 								<p class="desc">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 									Possimus, labore.
@@ -313,14 +309,12 @@
 							<!-- MENU ITEM 3 -->
 							<div class="menu-item">
 								<p class="menu-item__price heading-tertiary">20.00 zł</p>
-
 								<button class="menu-item__btn btn">
 									<svg>
 										<use xlink:href="images/icons/sprite.svg#icon-plus"></use>
 									</svg>
 									<span class="visually-hidden">Dodaj do koszyka</span>
 								</button>
-
 								<img
 									class="menu-item__img"
 									srcset="
@@ -330,9 +324,7 @@
 									src="images/cheeseburger-300.webp"
 									alt="Cheeseburger"
 								/>
-
 								<p class="heading-tertiary">Cheeseburger</p>
-
 								<p class="desc">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 									Possimus, labore.
@@ -342,14 +334,12 @@
 							<!-- MENU ITEM 4 -->
 							<div class="menu-item">
 								<p class="menu-item__price heading-tertiary">20.00 zł</p>
-
 								<button class="menu-item__btn btn">
 									<svg>
 										<use xlink:href="images/icons/sprite.svg#icon-plus"></use>
 									</svg>
 									<span class="visually-hidden">Dodaj do koszyka</span>
 								</button>
-
 								<img
 									class="menu-item__img"
 									srcset="
@@ -359,9 +349,7 @@
 									src="images/cheeseburger-300.webp"
 									alt="Cheeseburger"
 								/>
-
 								<p class="heading-tertiary">Cheeseburger</p>
-
 								<p class="desc">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 									Possimus, labore.
@@ -371,14 +359,12 @@
 							<!-- MENU ITEM 5 -->
 							<div class="menu-item">
 								<p class="menu-item__price heading-tertiary">20.00 zł</p>
-
 								<button class="menu-item__btn btn">
 									<svg>
 										<use xlink:href="images/icons/sprite.svg#icon-plus"></use>
 									</svg>
 									<span class="visually-hidden">Dodaj do koszyka</span>
 								</button>
-
 								<img
 									class="menu-item__img"
 									srcset="
@@ -388,9 +374,7 @@
 									src="images/cheeseburger-300.webp"
 									alt="Cheeseburger"
 								/>
-
 								<p class="heading-tertiary">Cheeseburger</p>
-
 								<p class="desc">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 									Possimus, labore.
@@ -400,14 +384,12 @@
 							<!-- MENU ITEM 6 -->
 							<div class="menu-item">
 								<p class="menu-item__price heading-tertiary">20.00 zł</p>
-
 								<button class="menu-item__btn btn">
 									<svg>
 										<use xlink:href="images/icons/sprite.svg#icon-plus"></use>
 									</svg>
 									<span class="visually-hidden">Dodaj do koszyka</span>
 								</button>
-
 								<img
 									class="menu-item__img"
 									srcset="
@@ -417,9 +399,7 @@
 									src="images/cheeseburger-300.webp"
 									alt="Cheeseburger"
 								/>
-
 								<p class="heading-tertiary">Cheeseburger</p>
-
 								<p class="desc">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 									Possimus, labore.
@@ -434,7 +414,7 @@
 
 			<!-- ============================= STATS ============================= -->
 			<section class="stats section bg-primary-400">
-				<div class="container">
+				<div class="wrapper">
 					<div class="even-columns">
 						<div>
 							<span class="stats__number fw-bold clr-neutral-100">18</span>
@@ -462,7 +442,7 @@
 
 			<!-- ============================= INFO ============================= -->
 			<section class="info section">
-				<div class="container">
+				<div class="wrapper">
 					<div class="bg-video">
 						<video class="bg-video__content" autoplay muted loop>
 							<source src="videos/section-info-bg-video.mp4" type="video/mp4" />
@@ -484,7 +464,7 @@
 
 			<!-- ========================== TESTIMONIAL ========================== -->
 			<section class="testimonial section bg-neutral-200">
-				<div class="container">
+				<div class="wrapper">
 					<div class="flow">
 						<h2 class="heading heading-secondary">
 							Zobacz co mówią o nas nasi
@@ -669,7 +649,7 @@
 
 			<!-- ============================= CTA ============================= -->
 			<section class="cta section bg-primary-400">
-				<div class="container">
+				<div class="wrapper">
 					<div class="cta__content even-columns">
 						<div>
 							<p class="heading-secondary clr-neutral-100">
@@ -685,6 +665,180 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- ============================ CONTACT =========================== -->
+			<section class="contact section bg-neutral-300">
+				<div class="wrapper">
+					<div class="even-columns">
+						<div>
+							<iframe
+								class="map"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.6415653011195!2d21.038662237858407!3d52.231729587432795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccff84380067%3A0xb85bd5bec7843b16!2sWio%C5%9Blarska%2C%2000-411%20Warszawa!5e0!3m2!1spl!2spl!4v1663515134910!5m2!1spl!2spl"
+								style="border: 0"
+								allowfullscreen=""
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+							></iframe>
+						</div>
+
+						<div class="contact__content">
+							<img
+								class="contact__img"
+								srcset="
+									images/restaurant-700.webp   700w,
+									images/restaurant-1000.webp 1000w
+								"
+								src="images/restaurant-700.webp"
+								alt="Restaurant"
+							/>
+
+							<div class="contact__info">
+								<svg class="contact__icon">
+									<use
+										xlink:href="images/icons/sprite.svg#icon-location-pin"
+									></use>
+								</svg>
+
+								<address class="heading-tertiary heading-tertiary--bright">
+									330 Briarhill Lane New Philadelphia
+								</address>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<!-- ============================ FOOTER =========================== -->
+		<footer class="primary-footer bg-neutral-100">
+			<div class="wrapper">
+				<div class="primary-footer__container">
+					<div class="primary-footer__about flow">
+						<a href="#home" class="primary-footer__logo" aria-label="Strona Główna">
+							<img src="images/logo.webp" alt="Top-Burgers" />
+						</a>
+
+						<p class="primary-footer__desc">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+							hic quae modi eum nemo odit, reiciendis officia sunt nobis
+							doloremque alias inventore vitae autem ullam.
+						</p>
+					</div>
+
+					<form class="newsletter-form">
+						<p class="heading-tertiary heading-tertiary--primary">
+							Zapisz się do newslettera
+						</p>
+						<div class="newsletter-form__group">
+							<input
+								type="text"
+								class="newsletter-form__input"
+								name="fname"
+								id="fname"
+								pattern="[A-Za-z]"
+								required
+							/>
+							<label for="fname" class="newsletter-form__label"
+								>Twoje imię</label
+							>
+						</div>
+
+						<div class="newsletter-form__group">
+							<input
+								type="e-mail"
+								class="newsletter-form__input"
+								name="email"
+								id="email"
+								required
+							/>
+							<label for="email" class="newsletter-form__label"
+								>Twój adres e-mail</label
+							>
+						</div>
+
+						<div class="newsletter-form__group">
+							<button class="btn btn--primary">Zapisz się</button>
+						</div>
+					</form>
+
+					<address class="primary-footer__contact">
+						<p class="heading-tertiary heading-tertiary--primary">Kontakt</p>
+
+						<ul class="primary-footer__contact-list">
+							<li>
+								<svg class="primary-footer__contact-icon">
+									<use xlink:href="images/icons/sprite.svg#icon-phone"></use>
+								</svg>
+								<a href="tel:123-456-789">+48 123 456 789</a>
+							</li>
+							<li>
+								<svg class="primary-footer__contact-icon">
+									<use xlink:href="images/icons/sprite.svg#icon-mail"></use>
+								</svg>
+								<a href="mailto:email@gmail.com">email@gmail.com</a>
+							</li>
+							<li>
+								<svg class="primary-footer__contact-icon">
+									<use
+										xlink:href="images/icons/sprite.svg#icon-location-pin"
+									></use>
+								</svg>
+								<p>330 Briarhill Lane New Philadelphia</p>
+							</li>
+						</ul>
+					</address>
+
+					<div class="primary-footer__nav">
+						<p class="heading-tertiary heading-tertiary--primary">Informacje</p>
+						<nav class="footer-nav">
+							<ul>
+								<li><a href="#">O Nas</a></li>
+								<li><a href="#">Menu</a></li>
+								<li><a href="#">Kontakt</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<ul class="social-list" role="list">
+						<li>
+							<a href="#" class="btn btn--primary" aria-label="facebook">
+								<svg class="btn-icon--big">
+									<use xlink:href="images/icons/sprite.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn btn--primary" aria-label="instagram">
+								<svg class="btn-icon--big">
+									<use
+										xlink:href="images/icons/sprite.svg#icon-instagram"
+									></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn btn--primary" aria-label="twitter"
+								><svg class="btn-icon--big">
+									<use
+										xlink:href="images/icons/sprite.svg#icon-twitter"
+									></use></svg
+							></a>
+						</li>
+						<li>
+							<a href="#" class="btn btn--primary" aria-label="youtube"
+								><svg class="btn-icon--big">
+									<use
+										xlink:href="images/icons/sprite.svg#icon-youtube"
+									></use></svg
+							></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="primary-footer__copyright">
+					<p>2022 © TopBurgers. Wszystkie Prawa Zastrzeżone</p>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

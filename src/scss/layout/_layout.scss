@@ -13,8 +13,8 @@
 	}
 }
 
-// CONTAINER
-.container {
+// WRAPPER
+.wrapper {
 	padding-inline: var(--su-300);
 
 	@include respond(sm) {
