@@ -26,31 +26,37 @@
 
 					<a href="#main" class="skip-nav-link"> Pomiń nawigację </a>
 
-					<button class="mobile-nav-toggle" aria-controls="nav-primary">
+					<button
+						class="mobile-nav-toggle"
+						aria-controls="header-sidebar"
+						aria-expanded="false"
+					>
 						<svg>
 							<use xlink:href="images/icons/sprite.svg#icon-menu"></use>
 						</svg>
 						<span class="visually-hidden">Menu</span>
 					</button>
 
-					<nav class="nav nav--primary" id="nav-primary">
-						<ul class="nav__list" role="list" aria-label="Główne">
-							<li class="nav__item">
-								<a href="#home" class="nav__link">Strona główna</a>
-							</li>
-							<li class="nav__item">
-								<a href="#features" class="nav__link">O Nas</a>
-							</li>
-							<li class="nav__item">
-								<a href="#menu" class="nav__link">Menu</a>
-							</li>
-							<li class="nav__item">
-								<a href="#" class="nav__link">Kontakt</a>
-							</li>
-						</ul>
-					</nav>
+					<div class="header-sidebar">
+						<nav class="nav nav--primary" id="nav-primary">
+							<ul class="nav__list" role="list" aria-label="Główne">
+								<li class="nav__item">
+									<a href="#home" class="nav__link">Strona główna</a>
+								</li>
+								<li class="nav__item">
+									<a href="#features" class="nav__link">O Nas</a>
+								</li>
+								<li class="nav__item">
+									<a href="#menu" class="nav__link">Menu</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link">Kontakt</a>
+								</li>
+							</ul>
+						</nav>
 
-					<button class="header__btn btn btn--primary">Zamów online</button>
+						<button class="header__btn btn btn--primary">Zamów online</button>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -714,7 +720,11 @@
 			<div class="wrapper">
 				<div class="primary-footer__container">
 					<div class="primary-footer__about flow">
-						<a href="#home" class="primary-footer__logo" aria-label="Strona Główna">
+						<a
+							href="#home"
+							class="primary-footer__logo"
+							aria-label="Strona Główna"
+						>
 							<img src="images/logo.webp" alt="Top-Burgers" />
 						</a>
 

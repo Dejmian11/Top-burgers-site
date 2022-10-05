@@ -48,6 +48,35 @@
 		}
 	}
 
+	&-sidebar {
+    display: none;
+    place-content: center;
+    gap: var(--su-500);
+    position: fixed;
+    z-index: var(--z-negative);
+    min-height: 360px;
+    inset: 0;
+    background-color: var(--clr-neutral-100);
+    
+    @media screen and (min-height: 400px) {
+      gap: var(--su-800);
+    }
+    
+    &[data-visible] {
+      display: grid;
+
+      & .header__btn {
+        display: inline;
+      }
+    }
+
+		@include respond(lg) {
+      all: revert;
+			display: flex;
+      align-items: center;
+		}
+	}
+
 	&__btn {
 		display: none;
 

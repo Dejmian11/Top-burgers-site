@@ -2,19 +2,21 @@
 
 .nav {
 	&--primary {
-		display: none;
-		margin-left: auto;
-		margin-right: var(--su-800);
-
 		@include respond(lg) {
-			display: block;
+			margin-left: auto;
+			margin-right: var(--su-800);
 		}
 	}
 
 	&__list {
 		display: grid;
-		grid-auto-flow: column;
-		gap: var(--su-800);
+		grid-auto-flow: row;
+    gap: var(--su-500);
+
+		@include respond(lg) {
+      grid-auto-flow: column;
+      gap: var(--su-800);
+		}
 	}
 
 	&__link {
@@ -23,7 +25,7 @@
 		transition: 0.2s all;
 
 		&:hover,
-    &:focus {
+		&:focus {
 			color: var(--clr-primary-400);
 		}
 	}
