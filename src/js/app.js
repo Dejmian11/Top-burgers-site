@@ -30,7 +30,7 @@ window.addEventListener('resize', () => {
 		headerSidebar.removeAttribute('data-visible');
 	}
 
-  changeMobileNavToggleIcon(headerSidebar);
+	changeMobileNavToggleIcon(headerSidebar);
 });
 
 // Change mobile nav toggle icon
@@ -50,3 +50,33 @@ const changeMobileNavToggleIcon = headerSidebar => {
 		);
 };
 
+// ========================== SMOOTH SCROLLING ==========================
+const homeSectionBtn = document.querySelector('.home__btn');
+const scrollBtn = document.querySelector('.home__scroll-link');
+const navLinks = document.querySelectorAll('.nav__link');
+
+const scrollToSectionBtns = [homeSectionBtn, scrollBtn, ...navLinks];
+
+console.log(scrollToSectionBtns);
+
+const scrollToSection = e => {
+	const btnHref = e.target.getAttribute('href');
+	const targetSection = document.querySelector(btnHref);
+	const targetSectionCoords = targetSection.getBoundingClientRect();
+	const headerHeight = document.querySelector('.header').offsetHeight;
+
+	console.log(targetSectionCoords.top);
+	console.log(window.scrollY);
+	console.log(headerHeight);
+
+	// window.scrollTo(
+	// 	targetSectionCoords.left + window.scrollX,
+	// 	targetSectionCoords.top + window.scrollY - headerHeight
+	// );
+
+  targetSection.scrollIntoView();
+};
+
+scrollToSectionBtns.forEach(scrollToSectionBtn => {
+	scrollToSectionBtn.addEventListener('click', scrollToSection);
+});
