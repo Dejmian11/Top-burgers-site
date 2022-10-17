@@ -80,6 +80,18 @@
 		}
 	}
 
+  // BUTTON WITH WEBSITE LOGO
+  &__logo {
+    width: 8.2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+		@include respond(lg) {
+			width: 9.2rem;
+		}
+  }
+
   // ICON
   .btn-icon--small {
     width: var(--su-600);
@@ -113,3 +125,5 @@
     fill: var(--clr-neutral-800);
   }
 }
+
+

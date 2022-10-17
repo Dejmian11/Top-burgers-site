@@ -25,7 +25,8 @@
 		transition: 0.2s all;
 
 		&:hover,
-		&:focus {
+		&:focus,
+    &.active {
 			color: var(--clr-primary-400);
 		}
 	}
