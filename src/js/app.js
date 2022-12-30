@@ -33,7 +33,7 @@ const sectinonsObserver = new IntersectionObserver(entries => {
 	entries.forEach(entry => {
 		if (!entry.isIntersecting) return;
 
-		console.log(entry);
+		// console.log(entry);
 
 		navLinks.forEach(navLink => {
 			navLink.classList.remove('active');
@@ -118,21 +118,37 @@ const changeMobileNavToggleIcon = headerSidebar => {
 };
 
 // ========================== SMOOTH SCROLLING ==========================
-const headerHeight = header.offsetHeight;
-const headerContainer = header.querySelector('.header-container');
-const headerContainerPadding =
-	headerContainer.getPropertyValue('padding-block');
 
-console.log(headerContainerPadding);
-
-// Get scrolled header height
-const scrolledHeaderHeight = headerHeight - headerContainerPadding;
-
-// Include header height
-document.documentElement.style.setProperty(
-	'--scroll-padding',
-	`${scrolledHeaderHeight}`
+// Resize Observer
+const headerResizeObserver = new ResizeObserver(entries =>
+	entries.forEach(entry => {
+		document.documentElement.style.setProperty(
+			'--scroll-padding',
+			`${entry.contentRect.height - 1}px`
+		);
+	})
 );
+
+headerResizeObserver.observe(header);
+
+// console.log(headerContainerPadding);
+// console.log(parseFloat(headerContainerPadding));
+// console.log(typeof headerContainerPadding);
+
+// // Get scrolled header height
+// const scrolledHeaderHeight =
+// 	headerHeight;
+
+// console.log(scrolledHeaderHeight);
+
+// // Include header height
+// document.documentElement.style.setProperty(
+// 	'--scroll-padding',
+// 	`${scrolledHeaderHeight}`
+// );
+
+////////////////
+
 // const homeSectionBtn = document.querySelector('.home__btn');
 // const scrollBtn = document.querySelector('.home__scroll-link');
 // const navLinks = document.querySelectorAll('.nav__link');

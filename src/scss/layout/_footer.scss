@@ -3,14 +3,71 @@
 .primary-footer {
 	&__container {
 		display: grid;
-		padding-top: 3rem;
+		grid-template-areas:
+			'about'
+			'contact'
+			'nav'
+			'form'
+			'social-list';
+		gap: var(--su-800);
+		padding-top: var(--su-900);
 		text-align: center;
+
+		@include respond(lg) {
+			grid-template-areas:
+				'about nav form'
+				'contact social-list form';
+		}
+	}
+
+	&__container > :nth-child(1) {
+		grid-area: about;
+	}
+
+	&__container > :nth-child(2) {
+		grid-area: contact;
+	}
+
+	&__container > :nth-child(3) {
+		grid-area: nav;
+	}
+
+	&__container > :nth-child(4) {
+		grid-area: form;
+	}
+
+	&__container > :nth-child(5) {
+		grid-area: social-list;
 	}
 
 	&__about {
-    --flow-space: 1.5rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		--flow-space: var(--su-600);
+	}
+
+	&__contact {
+    --flow-space: var(--su-600);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      max-width: 70%;
+    }
+
+    &-list li {
+      display: grid;
+      grid-template-columns: var(--su-500) 1fr;
+      gap: var(--su-500);
+      text-align: left;
+    }
+
+    &-icon {
+      fill: var(--clr-primary-400);
+      height: var(--su-500);
+      width: var(--su-500);
+      // margin-right: var(--su-900);
+    }
 	}
 }
