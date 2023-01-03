@@ -3,7 +3,9 @@
 .btn {
 	display: inline-flex;
 	align-items: center;
+  justify-content: center;
 	padding: 1.5em 2.8em;
+  width: 80%;
 	border: 0;
 	border-radius: var(--btn-border-radius);
 	font-size: var(--fs-button);
@@ -16,6 +18,7 @@
 
   @include respond(sm) {
     padding: 1.1em 1.8em;
+    width: auto;
   }
 
 	// PRIMARY OR ACTIVE BUTTON
@@ -33,6 +36,7 @@
 
     & .btn-icon--small,
     & .btn-icon--big {
+      width: initial;
       fill: var(--clr-neutral-100);
     }
 	}

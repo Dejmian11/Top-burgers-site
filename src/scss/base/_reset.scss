@@ -42,7 +42,9 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture,
-svg {
+svg,
+video,
+canvas {
   max-width: 100%;
   display: block;
 }

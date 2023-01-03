@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.social-list {
+	display: flex;
+	justify-content: space-around;
+  align-items: center;
+  // max-width: 400px;
+
+	@include respond(lg) {
+		margin-top: calc(var(--su-800) * -1);
+	}
+
+	&__link {
+		// height: var(--su-100);
+		// width: var(--su-100);
+	}
+
+	&__icon {
+    height: var(--su-700);
+		width: var(--su-700);
+    fill: var(--clr-primary-400);
+	}
+}

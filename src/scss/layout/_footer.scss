@@ -14,10 +14,22 @@
 		text-align: center;
 
 		@include respond(lg) {
+      grid-template-columns: repeat(3, 1fr);
 			grid-template-areas:
 				'about nav form'
-				'contact social-list form';
+				'contact . form'
+        '. social-list .';
+      column-gap: var(--su-900);
 		}
+
+    & > .flow,
+    .footer-nav__list {
+      --flow-space: var(--su-600);
+
+      @include respond(lg) {
+        --flow-space: var(--su-300)
+      }
+    }
 	}
 
 	&__container > :nth-child(1) {
@@ -41,14 +53,19 @@
 	}
 
 	&__about {
-		--flow-space: var(--su-600);
+    @include respond(lg) {
+      text-align: left;
+    }
 	}
 
 	&__contact {
-    --flow-space: var(--su-600);
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include respond(lg) {
+      align-items: flex-start;
+    }
 
     &-list {
       display: flex;
@@ -63,11 +80,21 @@
       text-align: left;
     }
 
+    &-link {
+      color: currentColor;
+      text-decoration: none;
+    }
+
     &-icon {
       fill: var(--clr-primary-400);
       height: var(--su-500);
       width: var(--su-500);
-      // margin-right: var(--su-900);
     }
 	}
+
+  &__nav {
+    @include respond(lg) {
+      text-align: left;
+    }
+  }
 }

@@ -227,7 +227,7 @@
 					<div class="tab">
 						<ul class="tab__btn-group">
 							<li>
-								<button class="tab__btn btn is-active">
+								<button class="tab__btn tab__btn--active">
 									<span class="tab__btn-text">Burgery</span>
 									<svg class="tab__btn-icon--big btn-icon--big">
 										<use
@@ -238,7 +238,7 @@
 								</button>
 							</li>
 							<li>
-								<button class="tab__btn btn btn--dark">
+								<button class="tab__btn">
 									<span class="tab__btn-text">Przekąski</span>
 									<svg class="tab__btn-icon--big btn-icon--big">
 										<use
@@ -249,7 +249,7 @@
 								</button>
 							</li>
 							<li>
-								<button class="tab__btn btn btn--dark">
+								<button class="tab__btn">
 									<span class="tab__btn-text">Napoje</span>
 									<svg class="tab__btn-icon--big btn-icon--big">
 										<use
@@ -739,13 +739,13 @@
 								<svg class="primary-footer__contact-icon">
 									<use xlink:href="images/icons/sprite.svg#icon-phone"></use>
 								</svg>
-								<a href="tel:123-456-789">+48 123 456 789</a>
+								<a href="tel:123-456-789" class="primary-footer__contact-link">+48 123 456 789</a>
 							</li>
 							<li>
 								<svg class="primary-footer__contact-icon">
 									<use xlink:href="images/icons/sprite.svg#icon-mail"></use>
 								</svg>
-								<a href="mailto:email@gmail.com">email@gmail.com</a>
+								<a href="mailto:email@gmail.com" class="primary-footer__contact-link">email@gmail.com</a>
 							</li>
 							<li>
 								<svg class="primary-footer__contact-icon">
@@ -758,10 +758,10 @@
 						</ul>
 					</address>
 
-					<div class="primary-footer__nav">
+					<div class="primary-footer__nav flow">
 						<p class="heading-tertiary heading-tertiary--primary">Informacje</p>
 						<nav class="footer-nav">
-							<ul>
+							<ul class="footer-nav__list flow" role="list">
 								<li><a href="#features" class="nav__link">O Nas</a></li>
 								<li><a href="#menu" class="nav__link">Menu</a></li>
 								<li><a href="#contact" class="nav__link">Kontakt</a></li>
@@ -769,7 +769,7 @@
 						</nav>
 					</div>
 
-					<form class="newsletter-form">
+					<form class="newsletter-form flow">
 						<p class="heading-tertiary heading-tertiary--primary">
 							Zapisz się do newslettera
 						</p>
@@ -777,6 +777,7 @@
 							<input
 								type="text"
 								class="newsletter-form__input"
+                placeholder="Twoje imię"
 								name="fname"
 								id="fname"
 								pattern="[A-Za-z]"
@@ -791,6 +792,7 @@
 							<input
 								type="e-mail"
 								class="newsletter-form__input"
+                placeholder="Twój adres e-mail"
 								name="email"
 								id="email"
 								required
@@ -807,15 +809,15 @@
 
 					<ul class="social-list" role="list">
 						<li>
-							<a href="#" class="btn btn--primary" aria-label="facebook">
-								<svg class="btn-icon--big">
+							<a href="#" class="social-list__link" aria-label="facebook">
+								<svg class="social-list__icon">
 									<use xlink:href="images/icons/sprite.svg#icon-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="btn btn--primary" aria-label="instagram">
-								<svg class="btn-icon--big">
+							<a href="#" class="social-list__link" aria-label="instagram">
+								<svg class="social-list__icon">
 									<use
 										xlink:href="images/icons/sprite.svg#icon-instagram"
 									></use>
@@ -823,16 +825,16 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" class="btn btn--primary" aria-label="twitter"
-								><svg class="btn-icon--big">
+							<a href="#" class="social-list__link" aria-label="twitter"
+								><svg class="social-list__icon">
 									<use
 										xlink:href="images/icons/sprite.svg#icon-twitter"
 									></use></svg
 							></a>
 						</li>
 						<li>
-							<a href="#" class="btn btn--primary" aria-label="youtube"
-								><svg class="btn-icon--big">
+							<a href="#" class="social-list__link" aria-label="youtube"
+								><svg class="social-list__icon">
 									<use
 										xlink:href="images/icons/sprite.svg#icon-youtube"
 									></use></svg
