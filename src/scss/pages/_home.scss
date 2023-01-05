@@ -2,14 +2,14 @@
 
 // =================== HOME SECTION ==================
 .home {
-	display: flex;
-	align-items: stretch;
-	min-height: max(100vh, 700px);
+  display: grid;
+  align-items: stretch;
+	min-height: clamp(700px, 100vh, 820px);
 	padding-block: 6.25rem var(--su-400);
 	background-image: linear-gradient(
 			to bottom,
-			rgba(var(--clr-neutral-100-rgb), 0.9),
-			rgba(var(--clr-neutral-100-rgb), 0.9)
+			hsl(0, 0%, 7%, 90%),
+			hsl(0, 0%, 7%, 90%)
 		),
 		url(../images/background-home-1000.webp);
 	background-size: cover;
@@ -19,62 +19,62 @@
 		(min-width: 75em) {
 		background-image: linear-gradient(
 				to bottom,
-				rgba(var(--clr-neutral-100-rgb), 0.9),
-				rgba(var(--clr-neutral-100-rgb), 0.9)
+				hsl(0, 0%, 7%, 90%),
+				hsl(0, 0%, 7%, 90%)
 			),
 			url(../images/background-home-1500.webp);
 	}
 
-	&-container {
-		display: grid;
-		align-items: center;
-		height: 100%;
-	}
+	&__container {
+    place-items: center;
+    height: 100%;
 
-	&__content {
-		align-items: center;
-
-		.flow {
-			--flow-space: var(--su-600);
-
-			@include respond(md) {
-				grid-column: 1;
-				animation: fadeInLeft 1s linear;
-			}
-
-			@include respond(lg) {
-				text-align: left;
-			}
+		@include respond(lg) {
+			grid-template-areas:
+				'content image'
+				'scroll scroll';
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 1fr auto;
 		}
 	}
 
 	&__img {
 		width: min(550px, 100%);
-		margin-inline: auto;
 		animation: fadeIn 1s linear;
+
+		@include respond(lg) {
+			grid-area: image;
+		}
+	}
+
+	&__content {
+		--flow-space: var(--su-600);
+
+		@include respond(lg) {
+			grid-area: content;
+			text-align: left;
+      animation: fadeInLeft 1s linear;
+		}
 	}
 
 	&__scroll {
-		align-self: end;
-		display: grid;
-		justify-items: center;
-		margin-top: var(--su-700);
-    
+    display: grid;
+    place-items: center;
+
 		@include respond(lg) {
-			margin-top: 0;
+			grid-area: scroll;
 		}
+
+    &-link:is(:hover, :focus) .home__scroll-icon {
+      scale: 1.2;
+    }
 
 		&-icon {
 			width: var(--su-700);
 			height: var(--su-700);
-			fill: var(--clr-neutral-900);
+      fill: var(--clr-neutral-800);
 			animation: moveVertically 1s linear infinite, fadeIn 1s linear;
 			transition: 0.2s all;
-      pointer-events: none;
-
-			&:hover {
-				scale: 1.2;
-			}
 		}
 	}
 }
@@ -101,8 +101,8 @@
 	overflow: hidden;
 	background-image: linear-gradient(
 			to bottom,
-			rgba(var(--clr-neutral-100-rgb), 0.8),
-			rgba(var(--clr-neutral-100-rgb), 0.9)
+			hsl(0, 0%, 7%, 80%),
+			hsl(0, 0%, 7%, 90%)
 		),
 		url(../images/background-menu-1000.webp);
 	background-size: cover;
@@ -113,8 +113,8 @@
 		(min-width: 75em) {
 		background-image: linear-gradient(
 				to bottom,
-				rgba(var(--clr-neutral-100-rgb), 0.8),
-				rgba(var(--clr-neutral-100-rgb), 0.9)
+				hsl(0, 0%, 7%, 80%),
+				hsl(0, 0%, 7%, 90%)
 			),
 			url(../images/background-menu-1500.webp);
 	}
@@ -177,7 +177,7 @@
 .info {
 	@include flex-center;
 	position: relative;
-  height: clamp(500px, 100vh, 1700px);
+	height: clamp(500px, 100vh, 1700px);
 
 	& .flow {
 		--flow-space: var(--su-600);
@@ -222,26 +222,18 @@
 	}
 
 	&__content {
-		position: relative;
 		min-height: 320px;
 		overflow: hidden;
-
-		&:hover .contact__img {
-			scale: 1.1;
-		}
 	}
 
 	&__img {
-    min-height: 100%;
-		filter: brightness(40%);
-		transition: scale 0.4s;
+		min-height: 100%;
 	}
 
 	&__info {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		translate: -50% -50%;
+    background-color: hsl(0, 0%, 7%, 70%);
+
+    
 	}
 
 	&__icon {

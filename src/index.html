@@ -66,44 +66,40 @@
 			<!-- ============================= HOME ============================= -->
 			<section class="home section" id="home">
 				<div class="wrapper">
-					<div class="home-container">
-						<div class="home__content even-columns">
-							<div>
-								<img
-									class="home__img"
-									srcset="
-										images/burger-500.webp   500w,
-										images/burger-1000.webp 1000w,
-										images/burger-1500.webp 1500w
-									"
-									sizes="(max-width: 62em) 90vw, 630px"
-									src="images/burger-1000.webp"
-									alt="Burger"
-								/>
-							</div>
+					<div class="home__container grid">
+						<img
+							class="home__img"
+							srcset="
+								images/burger-500.webp   500w,
+								images/burger-1000.webp 1000w,
+								images/burger-1500.webp 1500w
+							"
+							sizes="(max-width: 62em) 90vw, 630px"
+							src="images/burger-1000.webp"
+							alt="Burger"
+						/>
 
-							<div class="flow">
-								<h1
-									class="heading-primary"
-									aria-label="Wyjątkowe burgery dla smakoszy"
-								>
-									Wyjątkowe burgery dla
-									<span class="clr-primary-400 fw-bold">smakoszy</span>
-								</h1>
-								<p class="desc">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-									suscipit inventore voluptates asperiores atque animi sit minus
-									itaque in repellendus, id nisi accusamus similique aliquid!
-								</p>
-								<a class="home__btn btn btn--primary" href="#menu"
-									>Nasze Menu
-									<svg class="btn-icon--small">
-										<use
-											xlink:href="images/icons/sprite.svg#icon-chevron-down"
-										></use>
-									</svg>
-								</a>
-							</div>
+						<div class="home__content flow">
+							<h1
+								class="heading-primary"
+								aria-label="Wyjątkowe burgery dla smakoszy"
+							>
+								Wyjątkowe burgery dla
+								<span class="clr-primary-400 fw-bold">smakoszy</span>
+							</h1>
+							<p class="desc">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+								suscipit inventore voluptates asperiores atque animi sit minus
+								itaque in repellendus, id nisi accusamus similique aliquid!
+							</p>
+							<a class="btn btn--primary" href="#menu"
+								>Nasze Menu
+								<svg class="btn-icon--small">
+									<use
+										xlink:href="images/icons/sprite.svg#icon-chevron-down"
+									></use>
+								</svg>
+							</a>
 						</div>
 
 						<div class="home__scroll">
@@ -414,7 +410,7 @@
 						</div>
 					</div>
 
-					<button class="btn btn--outline">Zobacz całe menu</button>
+					<button class="btn btn--outline">Pokaż całe menu</button>
 				</div>
 			</section>
 
@@ -687,7 +683,7 @@
 							></iframe>
 						</div>
 
-						<div class="contact__content">
+						<div class="contact__content stacked">
 							<img
 								class="contact__img"
 								srcset="
@@ -739,13 +735,19 @@
 								<svg class="primary-footer__contact-icon">
 									<use xlink:href="images/icons/sprite.svg#icon-phone"></use>
 								</svg>
-								<a href="tel:123-456-789" class="primary-footer__contact-link">+48 123 456 789</a>
+								<a href="tel:123-456-789" class="primary-footer__contact-link"
+									>+48 123 456 789</a
+								>
 							</li>
 							<li>
 								<svg class="primary-footer__contact-icon">
 									<use xlink:href="images/icons/sprite.svg#icon-mail"></use>
 								</svg>
-								<a href="mailto:email@gmail.com" class="primary-footer__contact-link">email@gmail.com</a>
+								<a
+									href="mailto:email@gmail.com"
+									class="primary-footer__contact-link"
+									>email@gmail.com</a
+								>
 							</li>
 							<li>
 								<svg class="primary-footer__contact-icon">
@@ -777,7 +779,7 @@
 							<input
 								type="text"
 								class="newsletter-form__input"
-                placeholder="Twoje imię"
+								placeholder="Twoje imię"
 								name="fname"
 								id="fname"
 								pattern="[A-Za-z]"
@@ -792,7 +794,7 @@
 							<input
 								type="e-mail"
 								class="newsletter-form__input"
-                placeholder="Twój adres e-mail"
+								placeholder="Twój adres e-mail"
 								name="email"
 								id="email"
 								required

@@ -20,8 +20,9 @@
 	}
 
 	&__btn {
-		display: flex;
+		display: inline-flex;
 		padding: 1em;
+    font-weight: var(--fw-medium);
 		color: var(--clr-font);
 		background-color: var(--clr-neutral-300);
 		border: 0;

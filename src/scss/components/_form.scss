@@ -26,10 +26,6 @@
 		margin-left: var(--su-300);
 		margin-top: var(--su-100);
 		transition: all 0.3s;
-
-		// @include respond(lg) {
-		//   margin-left: var(--su-300);
-		// }
 	}
 
 	&__input:placeholder-shown + &__label {

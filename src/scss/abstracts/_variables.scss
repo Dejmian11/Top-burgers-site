@@ -6,13 +6,11 @@
 // ========================= VARIABLES CSS =========================
 :root {
 	// COLORS
-	--clr-primary-400-rgb: 255, 217, 0;
-	--clr-primary-500-rgb: 179, 152, 0;
-	--clr-neutral-100-rgb: 18, 18, 18;
+	--hue-color: 51;
 
-	--clr-primary-300: hsl(51, 100%, 64%);
-	--clr-primary-400: hsl(51, 100%, 50%);
-	--clr-primary-500: hsl(51, 100%, 35%);
+	--clr-primary-300: hsl(var(--hue-color), 100%, 64%);
+	--clr-primary-400: hsl(var(--hue-color), 100%, 50%);
+	--clr-primary-500: hsl(var(--hue-color), 100%, 35%);
 
 	--clr-neutral-100: hsl(0, 0%, 7%);
 	--clr-neutral-200: hsl(0, 0%, 13%);
@@ -31,8 +29,8 @@
 	);
 
 	// SHADOWS
-	--shadow-primary: rgba(var(--clr-neutral-100-rgb), 0.2) 0 0.4em 1.8em 0;
-	--shadow-primary-bottom: rgba(var(--clr-neutral-100-rgb), 0.2) 0 0.5em 1em 0;
+	--shadow-primary: hsl(0, 0%, 7%, 20%) 0 0.4em 1.8em 0;
+	--shadow-primary-bottom: hsl(0, 0%, 7%, 20%) 0 0.5em 1em 0;
 
 	// FONT FAMILY
 	--ff-body: 'Poppins', sans-serif;
@@ -48,12 +46,13 @@
 	--fw-bold: 700;
 
 	// Z-INDEX
-  --z-negative: -1;
+	--z-negative: -1;
 	--z-fixed: 100;
 	--z-modal: 1000;
 
 	// SPACING
 	--space-unit: 1rem;
+  
 	--su-100: calc(0.25 * var(--space-unit));
 	--su-200: calc(0.5 * var(--space-unit));
 	--su-300: calc(0.75 * var(--space-unit));
@@ -81,7 +80,6 @@
 	--fs-heading-primary: var(--fs-800);
 	--fs-heading-secondary: var(--fs-700);
 	--fs-heading-tertiary: var(--fs-600);
-	--fs-button: var(--fs-400);
 	--fs-nav: var(--fs-600);
 	--fs-footer: var(--fs-100);
 
@@ -98,7 +96,6 @@
 		--fs-body: var(--fs-500);
 		--fs-heading-primary: var(--fs-xxl);
 		--fs-heading-secondary: var(--fs-xl);
-		--fs-button: var(--fs-500);
 	}
 
 	// BUTTONS
