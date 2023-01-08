@@ -1,7 +1,7 @@
 @use 'mixins' as *;
 
 // ========================= GOOGLE FONTS =========================
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;800&display=swap');
 
 // ========================= VARIABLES CSS =========================
 :root {
@@ -37,6 +37,8 @@
 
 	// FONT COLORS
 	--clr-font: var(--clr-neutral-800);
+	--clr-font-dark: var(--clr-neutral-100);
+	--clr-font-primary: var(--clr-primary-400);
 	--clr-heading: var(--clr-neutral-900);
 
 	// FONT WEIGHTS
@@ -52,7 +54,7 @@
 
 	// SPACING
 	--space-unit: 1rem;
-  
+
 	--su-100: calc(0.25 * var(--space-unit));
 	--su-200: calc(0.5 * var(--space-unit));
 	--su-300: calc(0.75 * var(--space-unit));
@@ -97,7 +99,4 @@
 		--fs-heading-primary: var(--fs-xxl);
 		--fs-heading-secondary: var(--fs-xl);
 	}
-
-	// BUTTONS
-	--btn-border-radius: 100vmax;
 }

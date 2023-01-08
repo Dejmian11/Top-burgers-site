@@ -6,9 +6,14 @@
 	overflow: hidden;
 	transition: scale 0.5s ease, translate 0.5s ease;
 
-	&:hover,
-	&:focus-within {
-		scale: 1.05;
+	@include respond(lg) {
+		min-height: 25rem;
+	}
+
+	&:is(:hover, :focus-within) {
+		@include respond(lg) {
+			scale: 1.05;
+		}
 
 		& .feature-box__content {
 			translate: 0;
@@ -40,10 +45,6 @@
 		transition-delay: 0.75s;
 	}
 
-	@include respond(lg) {
-		height: 25rem;
-	}
-
 	&--1 {
 		@include feature-box-bg(1);
 	}
@@ -64,52 +65,41 @@
 			hsl(var(--hue-color), 100%, 50%, 80%),
 			hsl(var(--hue-color), 100%, 50%, 90%)
 		);
+		color: var(--clr-font-dark);
+
+		@include respond(md) {
+			text-align: left;
+		}
 
 		@include respond(lg) {
 			--flow-space: var(--su-600);
 
 			height: 100%;
-			text-align: left;
 			translate: 0 77%;
-
 			transition: translate 0.5s ease;
 		}
 	}
 
-	&__icon,
-	&__icon svg {
-		display: none;
-	}
-
 	&__icon {
+		display: none;
+
 		@include respond(lg) {
 			position: absolute;
 			top: 0;
 			translate: 0 -50%;
 			display: block;
 			padding: var(--su-300);
+			border-radius: 100vmax;
 			background-image: var(--clr-primary-gradient);
-			border-radius: 50%;
 			box-shadow: var(--shadow-primary);
-
 			transition: all 0.2s linear;
 		}
-	}
 
-	&__icon svg {
-		@include respond(lg) {
-			width: var(--su-500);
-			height: var(--su-500);
-			display: block;
-		}
-	}
-
-	& .desc {
-		margin-top: var(--su-400);
-    color: var(--clr-neutral-100);
-
-		@include respond(lg) {
-			margin-top: var(--su-500);
+		& svg {
+			@include respond(lg) {
+				width: var(--su-500);
+				height: var(--su-500);
+			}
 		}
 	}
 }

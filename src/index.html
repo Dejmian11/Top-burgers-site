@@ -20,9 +20,9 @@
 		<header class="header">
 			<div class="wrapper">
 				<div class="header-container">
-					<button class="btn__logo" onClick="window.location.reload();">
+					<a href="/" class="btn__logo btn">
 						<img src="images/logo.webp" alt="Top-Burgers" />
-					</button>
+					</a>
 
 					<a href="#main" class="skip-nav-link"> Pomiń nawigację </a>
 
@@ -31,7 +31,7 @@
 						aria-controls="header-sidebar"
 						aria-expanded="false"
 					>
-						<svg>
+						<svg class="btn-icon">
 							<use xlink:href="images/icons/sprite.svg#icon-menu"></use>
 						</svg>
 						<span class="visually-hidden">Menu</span>
@@ -79,22 +79,22 @@
 							alt="Burger"
 						/>
 
-						<div class="home__content flow">
+						<div class="home__content grid">
 							<h1
 								class="heading-primary"
 								aria-label="Wyjątkowe burgery dla smakoszy"
 							>
 								Wyjątkowe burgery dla
-								<span class="clr-primary-400 fw-bold">smakoszy</span>
+								<span class="clr-primary-400">smakoszy</span>
 							</h1>
-							<p class="desc">
+							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
 								suscipit inventore voluptates asperiores atque animi sit minus
 								itaque in repellendus, id nisi accusamus similique aliquid!
 							</p>
 							<a class="btn btn--primary" href="#menu"
 								>Nasze Menu
-								<svg class="btn-icon--small">
+								<svg class="btn-icon">
 									<use
 										xlink:href="images/icons/sprite.svg#icon-chevron-down"
 									></use>
@@ -123,13 +123,13 @@
 						<h2 class="heading-secondary">
 							Witamy w top <span class="clr-primary-400">burgers</span>!
 						</h2>
-						<p class="desc">
+						<p class="section__description">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
 							tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 						</p>
 					</div>
 
-					<div class="features-group even-columns">
+					<div class="features__container even-columns">
 						<!-- FEATURE BOX 1 -->
 						<div class="feature-box feature-box--1" tabindex="0">
 							<div class="feature-box__content">
@@ -144,7 +144,7 @@
 									<h3 class="heading-tertiary heading-tertiary--dark">
 										Szybka dostawa
 									</h3>
-									<p class="desc">
+									<p class="description">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit.
 										Voluptatem laudantium est dicta inventore deserunt
 										reprehenderit sint, nisi quos ad ratione.
@@ -165,7 +165,7 @@
 									<h3 class="heading-tertiary heading-tertiary--dark">
 										Najlepsze ceny
 									</h3>
-									<p class="desc">
+									<p class="description">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit.
 										Nostrum ex architecto quaerat! Error voluptatem qui minima
 										asperiores quae soluta accusantium?
@@ -186,7 +186,7 @@
 									<h3 class="heading-tertiary heading-tertiary--dark">
 										Świeże składniki
 									</h3>
-									<p class="desc">
+									<p class="description">
 										Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 										Suscipit, excepturi. Eveniet animi sequi quidem laboriosam
 										maiores porro quas, dolore incidunt quo, sunt ratione!
@@ -223,9 +223,9 @@
 					<div class="tab">
 						<ul class="tab__btn-group">
 							<li>
-								<button class="tab__btn tab__btn--active">
+								<button class="tab__btn tab__btn--active btn">
 									<span class="tab__btn-text">Burgery</span>
-									<svg class="tab__btn-icon--big btn-icon--big">
+									<svg class="tab__btn-icon btn-icon">
 										<use
 											xlink:href="images/icons/sprite.svg#icon-iconmonstr-fast-food-1"
 										></use>
@@ -234,9 +234,9 @@
 								</button>
 							</li>
 							<li>
-								<button class="tab__btn">
+								<button class="tab__btn btn">
 									<span class="tab__btn-text">Przekąski</span>
-									<svg class="tab__btn-icon--big btn-icon--big">
+									<svg class="tab__btn-icon btn-icon">
 										<use
 											xlink:href="images/icons/sprite.svg#icon-iconmonstr-fast-food-5"
 										></use>
@@ -245,9 +245,9 @@
 								</button>
 							</li>
 							<li>
-								<button class="tab__btn">
+								<button class="tab__btn btn">
 									<span class="tab__btn-text">Napoje</span>
-									<svg class="tab__btn-icon--big btn-icon--big">
+									<svg class="tab__btn-icon btn-icon">
 										<use
 											xlink:href="images/icons/sprite.svg#icon-iconmonstr-coffee-15"
 										></use>
@@ -419,22 +419,22 @@
 				<div class="wrapper">
 					<div class="even-columns">
 						<div>
-							<span class="stats__number fw-bold clr-neutral-100">18</span>
-							<p class="stats__desc heading-tertiary heading-tertiary--dark">
+							<span class="stats__number">18</span>
+							<p class="stats__text heading-tertiary heading-tertiary--dark">
 								Lat doświadczenia
 							</p>
 						</div>
 
 						<div>
-							<span class="stats__number fw-bold clr-neutral-100">1000+</span>
-							<p class="stats__desc heading-tertiary heading-tertiary--dark">
+							<span class="stats__number">1000+</span>
+							<p class="stats__text heading-tertiary heading-tertiary--dark">
 								Zadowolonych klientów
 							</p>
 						</div>
 
 						<div>
-							<span class="stats__number fw-bold clr-neutral-100">100%</span>
-							<p class="stats__desc heading-tertiary heading-tertiary--dark">
+							<span class="stats__number">100%</span>
+							<p class="stats__text heading-tertiary heading-tertiary--dark">
 								Smaku
 							</p>
 						</div>
@@ -443,7 +443,7 @@
 			</section>
 
 			<!-- ============================= INFO ============================= -->
-			<section class="info section">
+			<section class="info section grid">
 				<div class="wrapper">
 					<div class="bg-video">
 						<video class="bg-video__content" autoplay muted loop>
@@ -452,9 +452,9 @@
 						</video>
 					</div>
 
-					<div class="flow">
+					<div class="section__header flow">
 						<h2 class="heading-secondary">Niebo dla miłośników burgerów</h2>
-						<p class="desc">
+						<p class="section__description">
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
 							blanditiis quisquam iusto, aspernatur explicabo, illum magnam
 							dicta aperiam doloremque omnis deleniti facere earum itaque
@@ -652,7 +652,7 @@
 			<!-- ============================= CTA ============================= -->
 			<section class="cta section bg-primary-400">
 				<div class="wrapper">
-					<div class="cta__content even-columns">
+					<div class="cta__container even-columns">
 						<div>
 							<p class="heading-secondary clr-neutral-100">
 								Zamów z dostawą do domu już teraz!
@@ -716,9 +716,9 @@
 			<div class="wrapper">
 				<div class="primary-footer__container">
 					<div class="primary-footer__about flow">
-						<button class="btn__logo" onClick="window.location.reload();">
+						<a href="/" class="btn__logo btn">
 							<img src="images/logo.webp" alt="Top-Burgers" />
-						</button>
+						</a>
 
 						<p class="primary-footer__desc">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita

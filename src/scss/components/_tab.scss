@@ -20,7 +20,6 @@
 	}
 
 	&__btn {
-		display: inline-flex;
 		padding: 1em;
     font-weight: var(--fw-medium);
 		color: var(--clr-font);
@@ -47,7 +46,7 @@
 			color: var(--clr-neutral-100);
 			background-color: var(--clr-primary-400);
 
-			& .tab__btn-icon--big {
+			& .tab__btn-icon {
 				fill: var(--clr-neutral-100);
 			}
 		}
@@ -66,9 +65,7 @@
 		}
 	}
 
-	&__btn-icon--big {
-		width: var(--su-600);
-		height: var(--su-600);
+	&__btn-icon {
 		fill: var(--clr-font);
 
 		@include respond(md) {

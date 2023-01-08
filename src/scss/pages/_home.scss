@@ -2,8 +2,7 @@
 
 // =================== HOME SECTION ==================
 .home {
-  display: grid;
-  align-items: stretch;
+	display: grid;
 	min-height: clamp(700px, 100vh, 820px);
 	padding-block: 6.25rem var(--su-400);
 	background-image: linear-gradient(
@@ -26,8 +25,8 @@
 	}
 
 	&__container {
-    place-items: center;
-    height: 100%;
+		place-items: center;
+		height: 100%;
 
 		@include respond(lg) {
 			grid-template-areas:
@@ -48,31 +47,37 @@
 	}
 
 	&__content {
-		--flow-space: var(--su-600);
+		gap: var(--su-700);
+		justify-items: center;
+
+		@include respond(md) {
+			gap: var(--su-600);
+			justify-items: start;
+			text-align: left;
+			animation: fadeInLeft 1s linear;
+		}
 
 		@include respond(lg) {
 			grid-area: content;
-			text-align: left;
-      animation: fadeInLeft 1s linear;
 		}
 	}
 
 	&__scroll {
-    display: grid;
-    place-items: center;
+		display: grid;
+		place-items: center;
 
 		@include respond(lg) {
 			grid-area: scroll;
 		}
 
-    &-link:is(:hover, :focus) .home__scroll-icon {
-      scale: 1.2;
-    }
+		&-link:is(:hover, :focus) .home__scroll-icon {
+			scale: 1.2;
+		}
 
 		&-icon {
 			width: var(--su-700);
 			height: var(--su-700);
-      fill: var(--clr-neutral-800);
+			fill: var(--clr-neutral-800);
 			animation: moveVertically 1s linear infinite, fadeIn 1s linear;
 			transition: 0.2s all;
 		}
@@ -80,18 +85,16 @@
 }
 
 // ================= FEATURES SECTION ================
-.features-group {
+.features__container {
 	justify-content: center;
-	gap: var(--su-600);
 	margin-top: var(--su-700);
 
 	@include respond(lg) {
-		gap: var(--su-600);
 		margin-top: var(--su-800);
 	}
 
 	@include respond(xl) {
-		gap: 5.8rem;
+		gap: var(--su-900);
 	}
 }
 
@@ -152,22 +155,18 @@
 
 // =================== STATS SECTION ==================
 .stats {
-	padding-block: var(--su-800);
-
-	& .even-columns {
-		gap: var(--su-800);
-	}
-
 	&__number {
+		color: var(--clr-font-dark);
 		font-size: var(--fs-xl);
-		line-height: 1;
+		font-weight: var(--fw-bold);
+		line-height: 1.2;
 
 		@include respond(md) {
 			font-size: var(--fs-xxl);
 		}
 	}
 
-	&__desc {
+	&__text {
 		text-transform: uppercase;
 		font-weight: var(--fw-semi-bold);
 	}
@@ -175,13 +174,9 @@
 
 // =================== INFO SECTION ==================
 .info {
-	@include flex-center;
+	place-items: center;
 	position: relative;
-	height: clamp(500px, 100vh, 1700px);
-
-	& .flow {
-		--flow-space: var(--su-600);
-	}
+	height: clamp(500px, 90vh, 1700px);
 }
 
 // ================ TESTIMONIAL SECTION ===============
@@ -190,25 +185,13 @@
 
 // ==================== CTA SECTION ===================
 .cta {
-	padding-block: var(--su-800);
+  padding-block: var(--su-700);
 
-	&__content {
-		grid-gap: var(--su-600);
-
+	&__container {
 		@include respond(lg) {
 			grid-template-columns: 3fr 2fr;
-		}
-
-		& > div {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		@include respond(lg) {
-			&:first-child {
-				text-align: left;
-			}
+      place-items: center;
+      text-align: left;
 		}
 	}
 }
@@ -231,9 +214,7 @@
 	}
 
 	&__info {
-    background-color: hsl(0, 0%, 7%, 70%);
-
-    
+		background-color: hsl(0, 0%, 7%, 70%);
 	}
 
 	&__icon {
