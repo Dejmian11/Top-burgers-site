@@ -19,8 +19,8 @@
 		<!-- ========================== HEADER ========================== -->
 		<header class="header">
 			<div class="wrapper">
-				<div class="header-container">
-					<a href="/" class="btn__logo btn">
+				<div class="header-container grid">
+					<a href="/" class="logo">
 						<img src="images/logo.webp" alt="Top-Burgers" />
 					</a>
 
@@ -214,7 +214,7 @@
 						class="menu__bg-image menu__bg-image--3"
 					/>
 
-					<div class="flow">
+					<div class="section__header flow">
 						<h2 class="heading heading-secondary">
 							Zobacz nasze <span class="clr-primary-400">pyszne</span> menu
 						</h2>
@@ -418,22 +418,22 @@
 			<section class="stats section bg-primary-400">
 				<div class="wrapper">
 					<div class="even-columns">
-						<div>
-							<span class="stats__number">18</span>
+						<div class="flow">
+							<span class="stats__number heading-primary">18</span>
 							<p class="stats__text heading-tertiary heading-tertiary--dark">
 								Lat doświadczenia
 							</p>
 						</div>
 
-						<div>
-							<span class="stats__number">1000+</span>
+						<div class="flow">
+							<span class="stats__number heading-primary">1000+</span>
 							<p class="stats__text heading-tertiary heading-tertiary--dark">
 								Zadowolonych klientów
 							</p>
 						</div>
 
-						<div>
-							<span class="stats__number">100%</span>
+						<div class="flow">
+							<span class="stats__number heading-primary">100%</span>
 							<p class="stats__text heading-tertiary heading-tertiary--dark">
 								Smaku
 							</p>
@@ -467,7 +467,7 @@
 			<!-- ========================== TESTIMONIAL ========================== -->
 			<section class="testimonial section bg-neutral-200">
 				<div class="wrapper">
-					<div class="flow">
+					<div class="section__header flow">
 						<h2 class="heading heading-secondary">
 							Zobacz co mówią o nas nasi
 							<span class="clr-primary-400">klienci</span>
@@ -654,7 +654,7 @@
 				<div class="wrapper">
 					<div class="cta__container even-columns">
 						<div>
-							<p class="heading-secondary clr-neutral-100">
+							<p class="cta__title heading-secondary">
 								Zamów z dostawą do domu już teraz!
 							</p>
 						</div>
@@ -671,41 +671,108 @@
 			<!-- ============================ CONTACT =========================== -->
 			<section class="contact section bg-neutral-300" id="contact">
 				<div class="wrapper">
-					<div class="even-columns">
-						<div>
-							<iframe
-								class="map"
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.6415653011195!2d21.038662237858407!3d52.231729587432795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccff84380067%3A0xb85bd5bec7843b16!2sWio%C5%9Blarska%2C%2000-411%20Warszawa!5e0!3m2!1spl!2spl!4v1663515134910!5m2!1spl!2spl"
-								style="border: 0"
-								allowfullscreen=""
-								loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"
-							></iframe>
-						</div>
+					<div class="contact__content even-columns">
+						<div class="grid">
+							<h3 class="heading-tertiary heading-tertiary--primary">
+								Dane adresowe
+							</h3>
 
-						<div class="contact__content stacked">
-							<img
-								class="contact__img"
-								srcset="
-									images/restaurant-700.webp   700w,
-									images/restaurant-1000.webp 1000w
-								"
-								src="images/restaurant-700.webp"
-								alt="Restaurant"
-							/>
+							<address class="contact__info">
+								<ul class="contact__list flow" role="list">
+									<li class="contact__element">
+										<svg class="contact__icon">
+											<use
+												xlink:href="images/icons/sprite.svg#icon-location-pin"
+											></use>
+										</svg>
+										<p>330 Briarhill Lane New Philadelphia</p>
+									</li>
 
-							<div class="contact__info">
-								<svg class="contact__icon">
-									<use
-										xlink:href="images/icons/sprite.svg#icon-location-pin"
-									></use>
-								</svg>
+									<li class="contact__element">
+										<svg class="contact__icon">
+											<use
+												xlink:href="images/icons/sprite.svg#icon-phone"
+											></use>
+										</svg>
+										<a href="tel:123-456-789" class="contact__link"
+											>+48 123 456 789</a
+										>
+									</li>
 
-								<address class="heading-tertiary heading-tertiary--bright">
-									330 Briarhill Lane New Philadelphia
-								</address>
+									<li class="contact__element">
+										<svg class="contact__icon">
+											<use xlink:href="images/icons/sprite.svg#icon-mail"></use>
+										</svg>
+										<a href="mailto:email@gmail.com" class="contact__link"
+											>email@gmail.com</a
+										>
+									</li>
+								</ul>
+							</address>
+
+							<div class="flow">
+								<p class="fw-semi-bold">Godziny otwarcia:</p>
+								<p>pon - pt: &nbsp;&nbsp; 10:00 - 22:00</p>
 							</div>
+
+							<ul class="social-list" role="list">
+								<li>
+									<a
+										href="https://pl-pl.facebook.com/"
+										class="social-list__link"
+										aria-label="facebook"
+									>
+										<svg class="social-list__icon">
+											<use
+												xlink:href="images/icons/sprite.svg#icon-facebook"
+											></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://www.instagram.com/"
+										class="social-list__link"
+										aria-label="instagram"
+									>
+										<svg class="social-list__icon">
+											<use
+												xlink:href="images/icons/sprite.svg#icon-instagram"
+											></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://twitter.com/i/flow/login"
+										class="social-list__link"
+										aria-label="twitter"
+										><svg class="social-list__icon">
+											<use
+												xlink:href="images/icons/sprite.svg#icon-twitter"
+											></use></svg
+									></a>
+								</li>
+								<li>
+									<a
+										href="https://www.youtube.com/"
+										class="social-list__link"
+										aria-label="youtube"
+										><svg class="social-list__icon">
+											<use
+												xlink:href="images/icons/sprite.svg#icon-youtube"
+											></use></svg
+									></a>
+								</li>
+							</ul>
 						</div>
+
+						<iframe
+							class="map"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.6415653011195!2d21.038662237858407!3d52.231729587432795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccff84380067%3A0xb85bd5bec7843b16!2sWio%C5%9Blarska%2C%2000-411%20Warszawa!5e0!3m2!1spl!2spl!4v1663515134910!5m2!1spl!2spl"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
 					</div>
 				</div>
 			</section>
@@ -716,7 +783,7 @@
 			<div class="wrapper">
 				<div class="primary-footer__container">
 					<div class="primary-footer__about flow">
-						<a href="/" class="btn__logo btn">
+						<a href="/" class="logo">
 							<img src="images/logo.webp" alt="Top-Burgers" />
 						</a>
 
@@ -808,41 +875,6 @@
 							<button class="btn btn--primary">Zapisz się</button>
 						</div>
 					</form>
-
-					<ul class="social-list" role="list">
-						<li>
-							<a href="#" class="social-list__link" aria-label="facebook">
-								<svg class="social-list__icon">
-									<use xlink:href="images/icons/sprite.svg#icon-facebook"></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="social-list__link" aria-label="instagram">
-								<svg class="social-list__icon">
-									<use
-										xlink:href="images/icons/sprite.svg#icon-instagram"
-									></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="social-list__link" aria-label="twitter"
-								><svg class="social-list__icon">
-									<use
-										xlink:href="images/icons/sprite.svg#icon-twitter"
-									></use></svg
-							></a>
-						</li>
-						<li>
-							<a href="#" class="social-list__link" aria-label="youtube"
-								><svg class="social-list__icon">
-									<use
-										xlink:href="images/icons/sprite.svg#icon-youtube"
-									></use></svg
-							></a>
-						</li>
-					</ul>
 				</div>
 
 				<div class="primary-footer__copyright">

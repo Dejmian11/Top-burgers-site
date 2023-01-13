@@ -16,9 +16,9 @@
 	}
 
 	&-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
 		padding-block: var(--su-300);
 
 		@include respond(lg) {

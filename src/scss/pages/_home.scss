@@ -4,7 +4,7 @@
 .home {
 	display: grid;
 	min-height: clamp(700px, 100vh, 820px);
-	padding-block: 6.25rem var(--su-400);
+	padding-block: 6.25rem var(--su-900);
 	background-image: linear-gradient(
 			to bottom,
 			hsl(0, 0%, 7%, 90%),
@@ -13,6 +13,10 @@
 		url(../images/background-home-1000.webp);
 	background-size: cover;
 	background-position: top;
+
+	@include respond(md) {
+		padding-bottom: var(--su-400);
+	}
 
 	@media screen and (min-resolution: 192dpi) and (min-width: 48em),
 		(min-width: 75em) {
@@ -49,8 +53,9 @@
 	&__content {
 		gap: var(--su-700);
 		justify-items: center;
+		animation: fadeIn 1s linear;
 
-		@include respond(md) {
+		@include respond(sm) {
 			gap: var(--su-600);
 			justify-items: start;
 			text-align: left;
@@ -63,8 +68,12 @@
 	}
 
 	&__scroll {
-		display: grid;
+		display: none;
 		place-items: center;
+
+		@include respond(md) {
+			display: grid;
+		}
 
 		@include respond(lg) {
 			grid-area: scroll;
@@ -155,14 +164,15 @@
 
 // =================== STATS SECTION ==================
 .stats {
+	& .flow {
+		--flow-space: var(--su-200);
+	}
+
 	&__number {
 		color: var(--clr-font-dark);
-		font-size: var(--fs-xl);
-		font-weight: var(--fw-bold);
-		line-height: 1.2;
 
-		@include respond(md) {
-			font-size: var(--fs-xxl);
+		&::before {
+			display: none;
 		}
 	}
 
@@ -176,7 +186,7 @@
 .info {
 	place-items: center;
 	position: relative;
-	height: clamp(500px, 90vh, 1700px);
+	height: clamp(500px, 90vh, 820px);
 }
 
 // ================ TESTIMONIAL SECTION ===============
@@ -185,14 +195,19 @@
 
 // ==================== CTA SECTION ===================
 .cta {
-  padding-block: var(--su-700);
+	padding-block: var(--su-700);
 
 	&__container {
 		@include respond(lg) {
 			grid-template-columns: 3fr 2fr;
-      place-items: center;
-      text-align: left;
+			place-items: center;
+			text-align: left;
 		}
+	}
+
+	&__title {
+		margin-inline: auto;
+		color: var(--clr-font-dark);
 	}
 }
 
@@ -200,26 +215,56 @@
 .contact {
 	padding-block: 0;
 
-	& .even-columns {
-		gap: 0;
-	}
-
 	&__content {
-		min-height: 320px;
-		overflow: hidden;
+		gap: 0;
+		text-align: left;
+
+		@include respond(lg) {
+			grid-template-columns: 1fr 2fr;
+		}
 	}
 
-	&__img {
-		min-height: 100%;
+	& .grid:first-of-type {
+		justify-items: start;
+		padding: var(--su-800) var(--su-700);
+		background-color: var(--clr-neutral-200);
+
+		@include respond(md) {
+			padding: var(--su-800);
+		}
 	}
 
-	&__info {
-		background-color: hsl(0, 0%, 7%, 70%);
+	&__list {
+		--flow-space: var(--su-500);
+	}
+
+	&__element {
+		display: grid;
+		grid-template-columns: var(--su-500) 1fr;
+		gap: var(--su-500);
+	}
+
+	&__link {
+		text-decoration: none;
+		color: currentColor;
+		transition: all 0.2s;
+
+		&:is(:hover, :focus) {
+			color: var(--clr-font-primary);
+		}
 	}
 
 	&__icon {
-		margin-inline: auto;
-		width: 7rem;
-		fill: var(--clr-neutral-900);
+		width: var(--su-500);
+		height: var(--su-500);
+		fill: var(--clr-primary-400);
+	}
+
+	& div.flow {
+		--flow-space: var(--su-200);
+	}
+
+	.social-list {
+		margin-top: var(--su-200);
 	}
 }

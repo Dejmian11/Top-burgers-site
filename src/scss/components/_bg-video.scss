@@ -2,9 +2,8 @@
 
 .bg-video {
 	position: absolute;
-	z-index: -1;
 	inset: 0;
-	overflow: hidden;
+	z-index: var(--z-negative);
 	filter: brightness(30%);
 
 	&__content {

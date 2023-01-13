@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.logo {
+  display: inline-block;
+	max-width: 8.2rem;
+	background: transparent;
+
+	@include respond(lg) {
+		max-width: 9.2rem;
+	}
+}

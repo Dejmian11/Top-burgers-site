@@ -10,10 +10,13 @@
 
 	&__header {
 		--flow-space: var(--su-700);
+
+    & > * {
+      margin-inline: auto;
+    }
 	}
 
   &__description {
-    margin-inline: auto;
     max-width: 50ch;
   }
 }

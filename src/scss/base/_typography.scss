@@ -22,64 +22,55 @@ p {
 .heading-primary,
 .heading-secondary {
   position: relative;
+  max-width: 18ch;
+	font-family: var(--ff-accent);
 	text-transform: uppercase;
-  font-family: 'Anton', sans-serif;
-  
+  letter-spacing: 0.1rem;
+
 	&::before {
-    content: '';
+		content: '';
 		position: absolute;
 		top: calc(100% + var(--su-300));
 		left: 50%;
-		translate: -50%;
+		translate: -50% 0;
 		width: clamp(13rem, 50%, 20rem);
-		height: 0.1rem;
+		height: 0.2rem;
 		background-color: var(--clr-primary-400);
-		border-radius: 100vmax;
-    
-		@include respond(lg) {
-      height: 0.2rem;
-		}
 	}
 }
 
 .heading-secondary,
 .heading-tertiary {
-  line-height: 1.4;
+	line-height: 1.4;
 }
 
 .heading-primary {
-  max-width: 18ch;
 	font-size: var(--fs-heading-primary);
 	line-height: 1.2;
-  letter-spacing: 0.2rem;
 
-  @include respond(sm) {
-    max-width: 20ch;
-  }
-  
-	@include respond(md) {
-    &::before {
-      translate: -100%;
+	@include respond(sm) {
+		max-width: 20ch;
+
+		&::before {
+			translate: -100%;
 		}
 	}
 }
 
 .heading-secondary {
-  max-width: 18ch;
-	margin-inline: auto;
 	font-size: var(--fs-heading-secondary);
 
-  @include respond(md) {
-    max-width: 22ch;
-  }
+	@include respond(md) {
+		max-width: 22ch;
+	}
 }
 
 .heading-tertiary {
-  font-size: var(--fs-heading-tertiary);
-  font-weight: var(--fw-semi-bold);
-  
+	font-size: var(--fs-heading-tertiary);
+	font-weight: var(--fw-semi-bold);
+
 	&--bright {
-    color: var(--clr-heading);
+		color: var(--clr-heading);
 	}
 
 	&--dark {

@@ -60,16 +60,6 @@
 		width: var(--su-600);
 		height: var(--su-600);
 	}
-
-	// WEBSITE LOGO LINK
-	&__logo {
-		max-width: 8.2rem;
-		background: transparent;
-
-		@include respond(lg) {
-			max-width: 9.2rem;
-		}
-	}
 }
 
 .mobile-nav-toggle {

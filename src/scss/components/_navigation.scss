@@ -3,20 +3,23 @@
 .nav {
 	&--primary {
 		@include respond(lg) {
-			margin-left: auto;
 			margin-right: var(--su-800);
 		}
 	}
 
 	&__list {
-		display: grid;
+    display: grid;
 		grid-auto-flow: row;
 		gap: var(--su-500);
 
 		@include respond(lg) {
 			grid-auto-flow: column;
-			gap: var(--su-800);
+			gap: var(--su-700);
 		}
+
+    @include respond(xl) {
+      gap: var(--su-800);
+    }
 	}
 
 	&__link {
@@ -24,10 +27,9 @@
 		color: var(--clr-font);
 		transition: 0.2s all;
 
-		&:hover,
-		&:focus,
-		&.active {
-			color: var(--clr-primary-400);
-		}
+    &:is(:hover, :focus),
+    &.active {
+      color: var(--clr-primary-400);
+    }
 	}
 }
